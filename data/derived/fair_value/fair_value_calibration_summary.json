@@ -1,0 +1,14 @@
+{
+  "calibration_scope": "quarter",
+  "rows_backtested": 138,
+  "quarters": 3,
+  "payout_error_weight": 0.6,
+  "clearing_price_error_weight": 0.4,
+  "ape_cap": 200.0,
+  "quarter_balanced_weighting": true,
+  "min_total_discount": 0.1,
+  "discount_penalty_strength": 100.0,
+  "mape_actual_per_unit_mean": 9.999988093868838,
+  "mape_clearing_price_mean": 147.2612642276401,
+  "weighted_score_mean": 64.90449854737736
+}

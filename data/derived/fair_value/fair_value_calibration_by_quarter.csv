@@ -1,0 +1,4 @@
+quarter,rows,model_risk_discount,liquidity_discount,payout_error_weight,clearing_price_error_weight,ape_cap,quarter_balanced_weighting,mape_actual_per_unit,mape_clearing_price,weighted_score
+C2025Q3,84,0.0,0.1,0.6,0.4,200.0,1,9.999977812053515,170.2355201454976,74.09419474543115
+C2025Q4,48,0.0,0.1,0.6,0.4,200.0,1,10.000004371702058,101.98837210716492,46.79535146588721
+C2026Q1,6,0.0,0.1,0.6,0.4,200.0,1,10.000001816617603,187.80481834143703,81.12192842654538
