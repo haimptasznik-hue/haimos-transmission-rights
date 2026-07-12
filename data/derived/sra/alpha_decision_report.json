@@ -1,0 +1,161 @@
+{
+  "status": "ok",
+  "quarter": "C2026Q2",
+  "products": [
+    {
+      "product_id": "C2026Q2:VIC1-NSW1:NSW1:T01",
+      "max_bid": 1941.0,
+      "bid_units": 2,
+      "executed_units": 2,
+      "auction_clearing_price": 1280.1,
+      "final_realised_payout_per_unit": 355.8182,
+      "realised_pnl": -2415.069224657534
+    },
+    {
+      "product_id": "C2026Q2:VIC1-NSW1:NSW1:T02",
+      "max_bid": 1280.1,
+      "bid_units": 2,
+      "executed_units": 1,
+      "auction_clearing_price": 1004.0,
+      "final_realised_payout_per_unit": 355.8182,
+      "realised_pnl": -870.3408684931508
+    },
+    {
+      "product_id": "C2026Q2:VIC1-NSW1:NSW1:T03",
+      "max_bid": 1142.05,
+      "bid_units": 2,
+      "executed_units": 1,
+      "auction_clearing_price": 873.6,
+      "final_realised_payout_per_unit": 355.8182,
+      "realised_pnl": -711.0867424657536
+    },
+    {
+      "product_id": "C2026Q2:NSW1-QLD1:NSW1:T04",
+      "max_bid": 5460.0,
+      "bid_units": 1,
+      "executed_units": 1,
+      "auction_clearing_price": 4503.0,
+      "final_realised_payout_per_unit": 861.8833,
+      "realised_pnl": -4547.700138356164
+    },
+    {
+      "product_id": "C2026Q2:V-SA:SA1:T04",
+      "max_bid": 3276.0,
+      "bid_units": 2,
+      "executed_units": 1,
+      "auction_clearing_price": 3249.13,
+      "final_realised_payout_per_unit": 90.9246,
+      "realised_pnl": -3812.348737123288
+    },
+    {
+      "product_id": "C2026Q2:NSW1-QLD1:NSW1:T05",
+      "max_bid": 4981.5,
+      "bid_units": 4,
+      "executed_units": 4,
+      "auction_clearing_price": 4275.0,
+      "final_realised_payout_per_unit": 861.8833,
+      "realised_pnl": -16750.377758904106
+    },
+    {
+      "product_id": "C2026Q2:V-SA:SA1:T05",
+      "max_bid": 3262.565,
+      "bid_units": 7,
+      "executed_units": 5,
+      "auction_clearing_price": 3086.67,
+      "final_realised_payout_per_unit": 90.9246,
+      "realised_pnl": -17774.700339041097
+    },
+    {
+      "product_id": "C2026Q2:NSW1-QLD1:NSW1:T06",
+      "max_bid": 4503.0,
+      "bid_units": 4,
+      "executed_units": 4,
+      "auction_clearing_price": 4353.3,
+      "final_realised_payout_per_unit": 861.8833,
+      "realised_pnl": -16769.192000000003
+    },
+    {
+      "product_id": "C2026Q2:NSW1-QLD1:NSW1:T09",
+      "max_bid": 4503.0,
+      "bid_units": 5,
+      "executed_units": 4,
+      "auction_clearing_price": 4368.0,
+      "final_realised_payout_per_unit": 861.8833,
+      "realised_pnl": -15792.010909589042
+    },
+    {
+      "product_id": "C2026Q2:V-SA:VIC1:T09",
+      "max_bid": 12500.04,
+      "bid_units": 11,
+      "executed_units": 6,
+      "auction_clearing_price": 12370.0,
+      "final_realised_payout_per_unit": 11028.2897,
+      "realised_pnl": -15558.682347945214
+    },
+    {
+      "product_id": "C2026Q2:NSW1-QLD1:NSW1:T10",
+      "max_bid": 4435.5,
+      "bid_units": 6,
+      "executed_units": 5,
+      "auction_clearing_price": 4368.0,
+      "final_realised_payout_per_unit": 861.8833,
+      "realised_pnl": -19299.6235
+    },
+    {
+      "product_id": "C2026Q2:NSW1-QLD1:NSW1:T11",
+      "max_bid": 4368.0,
+      "bid_units": 5,
+      "executed_units": 4,
+      "auction_clearing_price": 3184.3,
+      "final_realised_payout_per_unit": 861.8833,
+      "realised_pnl": -10067.333928767124
+    },
+    {
+      "product_id": "C2026Q2:V-SA:VIC1:T11",
+      "max_bid": 12500.04,
+      "bid_units": 13,
+      "executed_units": 7,
+      "auction_clearing_price": 11814.2,
+      "final_realised_payout_per_unit": 11028.2897,
+      "realised_pnl": -10550.566973972615
+    },
+    {
+      "product_id": "C2026Q2:VIC1-NSW1:VIC1:T11",
+      "max_bid": 16951.32,
+      "bid_units": 15,
+      "executed_units": 8,
+      "auction_clearing_price": 13964.4,
+      "final_realised_payout_per_unit": 13083.0552,
+      "realised_pnl": -13871.506980821912
+    },
+    {
+      "product_id": "C2026Q2:NSW1-QLD1:NSW1:T12",
+      "max_bid": 4368.0,
+      "bid_units": 6,
+      "executed_units": 5,
+      "auction_clearing_price": 2706.9,
+      "final_realised_payout_per_unit": 861.8833,
+      "realised_pnl": -9784.447698630138
+    },
+    {
+      "product_id": "C2026Q2:V-SA:SA1:T12",
+      "max_bid": 4384.665,
+      "bid_units": 9,
+      "executed_units": 6,
+      "auction_clearing_price": 3902.68,
+      "final_realised_payout_per_unit": 90.9246,
+      "realised_pnl": -23838.29011726027
+    },
+    {
+      "product_id": "C2026Q2:VIC1-NSW1:VIC1:T12",
+      "max_bid": 16938.684999999998,
+      "bid_units": 16,
+      "executed_units": 7,
+      "auction_clearing_price": 13520.19,
+      "final_realised_payout_per_unit": 13083.0552,
+      "realised_pnl": -6971.353087808224
+    }
+  ],
+  "realised_pnl": -189384.63135383563,
+  "deployable_capital_estimate": 554783.4425538357
+}

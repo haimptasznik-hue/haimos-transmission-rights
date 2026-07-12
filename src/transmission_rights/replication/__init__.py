@@ -9,10 +9,6 @@ from transmission_rights.services.aemo.sra_distribution_engine import (
     SRADistributionEngine,
     SettlementRunEnum,
 )
-from transmission_rights.services.aemo.sra_historical_replay import (
-    HistoricalSnapshot,
-    SRAHistoricalReplay,
-)
 from transmission_rights.services.aemo.sra_irssr_calculator import (
     IRSRInterval,
     SRAIRSRCalculator,
@@ -26,10 +22,8 @@ from transmission_rights.services.aemo.sra_product_registry import (
 __all__ = [
     "AllocationTypeEnum",
     "CategoryDistribution",
-    "HistoricalSnapshot",
     "IRSRInterval",
     "SRADistributionEngine",
-    "SRAHistoricalReplay",
     "SRAIRSRCalculator",
     "SRAProduct",
     "SRAProductRegistry",

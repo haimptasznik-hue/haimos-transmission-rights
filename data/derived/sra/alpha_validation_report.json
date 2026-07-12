@@ -1,0 +1,1026 @@
+{
+  "generated_at": "2026-07-12T13:52:59.758736+00:00",
+  "schema_check": {
+    "status": "pass",
+    "missing_columns": [],
+    "row_count": 2304
+  },
+  "leakage_audit": {
+    "status": "pass",
+    "failures": [],
+    "checked_rows": 2304
+  },
+  "fidelity_coverage": {
+    "status": "pass",
+    "decision_point": "2026-07-12T00:00:00+00:00",
+    "supported_quarters": 25,
+    "missing_ruleset_quarters": [],
+    "below_target_quarters": [],
+    "weak_category_rows": [],
+    "reconciliation_target_pct": 99.0,
+    "no_manual_overrides": true,
+    "results": [
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2020Q2",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 1533.1394,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2020Q3",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 6012.296983333334,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2020Q4",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 9306.753216666666,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2021Q1",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 5032.8029,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2021Q2",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 13351.4194,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2021Q3",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 4794.645100000001,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2021Q4",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 11256.827433333334,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2022Q1",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 12382.674699999998,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2022Q2",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 18625.368400000003,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2022Q3",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 19738.7666,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2022Q4",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 12766.341133333335,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2023Q1",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 11246.93555,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2023Q2",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 14648.46585,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2023Q3",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 13366.012266666665,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2023Q4",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 11575.49215,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2024Q1",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 12859.188250000001,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2024Q2",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 17592.036666666667,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2024Q3",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 21257.03398333333,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2024Q4",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 19118.491599999998,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2025Q1",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 11353.875750000001,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2025Q2",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 17376.31875,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2025Q3",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 11652.920516666665,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2025Q4",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 12416.702266666667,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2026Q1",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 17755.0317,
+        "reconciliation_pct": 100.0
+      },
+      {
+        "decision_point": "2026-07-12T00:00:00+00:00",
+        "quarter": "C2026Q2",
+        "rows_replayed": 6,
+        "rows_reality": 6,
+        "state_versions": {
+          "ruleset": "RS-BASELINE-v1"
+        },
+        "status": "ok",
+        "rows_compared": 6,
+        "mean_abs_payout_error": 0.0,
+        "max_abs_payout_error": 0.0,
+        "mean_abs_alpha_error": 0.0,
+        "max_abs_alpha_error": 0.0,
+        "mean_real_payout": 5180.159116666667,
+        "reconciliation_pct": 100.0
+      }
+    ]
+  },
+  "overall_backtest": {
+    "label": "IN_SAMPLE_HEURISTIC \u2014 not investable evidence",
+    "status": "ok",
+    "start_capital": 50000.0,
+    "end_capital": 3967310.077068355,
+    "total_pnl": 3917310.077068355,
+    "return_on_acquisition_cost": 0.27237925142774405,
+    "hit_rate": 0.4625267665952891,
+    "profit_factor": 1.5418168584669325,
+    "sharpe_ratio": 0.25240683209722603,
+    "volatility_quarterly": 1.0791278871675896,
+    "max_drawdown": 0.4943918083424659,
+    "trades": 467,
+    "quarters_traded": 25,
+    "max_single_trade_contribution_pct": 0.1270326876682723,
+    "max_corridor_contribution_pct": 0.7210716345846437,
+    "worst_quarter": {
+      "quarter": "C2023Q1",
+      "pnl": -972890.0760972602
+    },
+    "best_quarter": {
+      "quarter": "C2022Q3",
+      "pnl": 1793669.0002950684
+    }
+  },
+  "split_backtest": {
+    "in_sample": {
+      "summary": {
+        "label": "IN_SAMPLE_HEURISTIC \u2014 not investable evidence",
+        "status": "ok",
+        "start_capital": 50000.0,
+        "end_capital": 4283139.513574932,
+        "total_pnl": 4233139.513574932,
+        "return_on_acquisition_cost": 0.37863996796747684,
+        "hit_rate": 0.5095890410958904,
+        "profit_factor": 1.7657240118908626,
+        "sharpe_ratio": 0.3434199285935453,
+        "volatility_quarterly": 1.1025567721657068,
+        "max_drawdown": 0.4943918083424659,
+        "trades": 365,
+        "quarters_traded": 17,
+        "max_single_trade_contribution_pct": 0.11755493196579037,
+        "max_corridor_contribution_pct": 0.5778069361621708,
+        "worst_quarter": {
+          "quarter": "C2023Q1",
+          "pnl": -1073668.3941972603
+        },
+        "best_quarter": {
+          "quarter": "C2022Q3",
+          "pnl": 1793669.0002950684
+        }
+      },
+      "rows": 1164,
+      "trades": 365,
+      "quarter_rows": 17,
+      "by_corridor": [
+        {
+          "interconnector_id": "VIC1-NSW1",
+          "from_region": "VIC1",
+          "trades": 29,
+          "pnl": 2298731.080338904,
+          "mean_alpha": 6384.465979310345
+        },
+        {
+          "interconnector_id": "NSW1-QLD1",
+          "from_region": "NSW1",
+          "trades": 65,
+          "pnl": 2064500.3491928766,
+          "mean_alpha": 7812.782255384615
+        },
+        {
+          "interconnector_id": "V-SA",
+          "from_region": "VIC1",
+          "trades": 64,
+          "pnl": 1850983.0534323289,
+          "mean_alpha": 4210.3467015625
+        },
+        {
+          "interconnector_id": "V-SA",
+          "from_region": "SA1",
+          "trades": 63,
+          "pnl": 492089.24956684926,
+          "mean_alpha": 1532.2793682539682
+        },
+        {
+          "interconnector_id": "NSW1-QLD1",
+          "from_region": "QLD1",
+          "trades": 40,
+          "pnl": 381437.0234928768,
+          "mean_alpha": 5378.3738925
+        },
+        {
+          "interconnector_id": "VIC1-NSW1",
+          "from_region": "NSW1",
+          "trades": 104,
+          "pnl": -2854601.242448904,
+          "mean_alpha": -2701.1803173076923
+        }
+      ],
+      "by_tranche": [
+        {
+          "tranche_no": 1,
+          "trades": 28,
+          "pnl": 517489.6849271232,
+          "mean_alpha": 3293.3780571428574
+        },
+        {
+          "tranche_no": 2,
+          "trades": 24,
+          "pnl": 647413.9519138356,
+          "mean_alpha": 4484.8056625
+        },
+        {
+          "tranche_no": 3,
+          "trades": 22,
+          "pnl": 1063037.5051653425,
+          "mean_alpha": 7406.698627272726
+        },
+        {
+          "tranche_no": 4,
+          "trades": 25,
+          "pnl": 345263.7793213699,
+          "mean_alpha": 3607.863764
+        },
+        {
+          "tranche_no": 5,
+          "trades": 32,
+          "pnl": 583166.1588149315,
+          "mean_alpha": 3974.490796875
+        },
+        {
+          "tranche_no": 6,
+          "trades": 30,
+          "pnl": 453201.4965049315,
+          "mean_alpha": 3555.75888
+        },
+        {
+          "tranche_no": 7,
+          "trades": 33,
+          "pnl": 41316.492485479466,
+          "mean_alpha": 1429.216396969697
+        },
+        {
+          "tranche_no": 8,
+          "trades": 35,
+          "pnl": 403390.8858054795,
+          "mean_alpha": 2298.781568571428
+        },
+        {
+          "tranche_no": 9,
+          "trades": 35,
+          "pnl": 184753.29177972602,
+          "mean_alpha": 2207.0269999999996
+        },
+        {
+          "tranche_no": 10,
+          "trades": 31,
+          "pnl": 286390.1484434247,
+          "mean_alpha": 1055.7662967741933
+        },
+        {
+          "tranche_no": 11,
+          "trades": 31,
+          "pnl": -292107.7148636986,
+          "mean_alpha": 483.43614516129014
+        },
+        {
+          "tranche_no": 12,
+          "trades": 39,
+          "pnl": -176.16672301368453,
+          "mean_alpha": 1378.3404564102566
+        }
+      ],
+      "by_confidence_band": [
+        {
+          "confidence_band": "low",
+          "trades": 156,
+          "pnl": 2928752.3173628766,
+          "mean_alpha": 3724.5110288461533
+        },
+        {
+          "confidence_band": "medium",
+          "trades": 161,
+          "pnl": 739585.0881626029,
+          "mean_alpha": 1558.3400701863352
+        },
+        {
+          "confidence_band": "high",
+          "trades": 48,
+          "pnl": 564802.1080494521,
+          "mean_alpha": 3359.830833333333
+        }
+      ]
+    },
+    "validation": {
+      "summary": {
+        "label": "IN_SAMPLE_HEURISTIC \u2014 not investable evidence",
+        "status": "ok",
+        "start_capital": 50000.0,
+        "end_capital": -121674.01162178078,
+        "total_pnl": -171674.01162178078,
+        "return_on_acquisition_cost": -6.3771611673711925,
+        "hit_rate": 0.5555555555555556,
+        "profit_factor": 0.23458928325836645,
+        "sharpe_ratio": -0.6447208667034791,
+        "volatility_quarterly": 9.891352206386994,
+        "max_drawdown": 1.455191522836685e-16,
+        "trades": 9,
+        "quarters_traded": 2,
+        "max_single_trade_contribution_pct": 0.5763889242638606,
+        "max_corridor_contribution_pct": 1.013914152931414,
+        "worst_quarter": {
+          "quarter": "C2024Q4",
+          "pnl": -223816.4992169863
+        },
+        "best_quarter": {
+          "quarter": "C2024Q3",
+          "pnl": 52142.48759520548
+        }
+      },
+      "rows": 216,
+      "trades": 9,
+      "quarter_rows": 2,
+      "by_corridor": [
+        {
+          "interconnector_id": "NSW1-QLD1",
+          "from_region": "NSW1",
+          "trades": 1,
+          "pnl": 1915.1428438356165,
+          "mean_alpha": 2077.5812
+        },
+        {
+          "interconnector_id": "V-SA",
+          "from_region": "SA1",
+          "trades": 1,
+          "pnl": 473.5556082191788,
+          "mean_alpha": 903.6378000000004
+        },
+        {
+          "interconnector_id": "VIC1-NSW1",
+          "from_region": "NSW1",
+          "trades": 7,
+          "pnl": -174062.7100738356,
+          "mean_alpha": -12246.286314285713
+        }
+      ],
+      "by_tranche": [
+        {
+          "tranche_no": 1,
+          "trades": 3,
+          "pnl": -35412.80000479452,
+          "mean_alpha": -6187.964666666667
+        },
+        {
+          "tranche_no": 3,
+          "trades": 3,
+          "pnl": -89606.35483068493,
+          "mean_alpha": -6409.559133333332
+        },
+        {
+          "tranche_no": 4,
+          "trades": 1,
+          "pnl": 28201.588997260274,
+          "mean_alpha": 4766.1633999999995
+        },
+        {
+          "tranche_no": 6,
+          "trades": 1,
+          "pnl": -49849.64203287671,
+          "mean_alpha": -24817.988599999997
+        },
+        {
+          "tranche_no": 7,
+          "trades": 1,
+          "pnl": -25006.80375068493,
+          "mean_alpha": -24898.3886
+        }
+      ],
+      "by_confidence_band": [
+        {
+          "confidence_band": "low",
+          "trades": 4,
+          "pnl": -64070.21449589041,
+          "mean_alpha": -10780.508149999998
+        },
+        {
+          "confidence_band": "medium",
+          "trades": 5,
+          "pnl": -107603.7971258904,
+          "mean_alpha": -7924.150519999998
+        }
+      ]
+    },
+    "out_of_sample": {
+      "summary": {
+        "label": "IN_SAMPLE_HEURISTIC \u2014 not investable evidence",
+        "status": "ok",
+        "start_capital": 50000.0,
+        "end_capital": -115637.7033534247,
+        "total_pnl": -165637.7033534247,
+        "return_on_acquisition_cost": -4.991996332764537,
+        "hit_rate": 0.3076923076923077,
+        "profit_factor": 0.06308654146520863,
+        "sharpe_ratio": -1.1784980129767488,
+        "volatility_quarterly": 4.235897114629269,
+        "max_drawdown": 0.0,
+        "trades": 13,
+        "quarters_traded": 4,
+        "max_single_trade_contribution_pct": 0.2860171226060389,
+        "max_corridor_contribution_pct": 0.9939188529972642,
+        "worst_quarter": {
+          "quarter": "C2025Q4",
+          "pnl": -106536.86829863014
+        },
+        "best_quarter": {
+          "quarter": "C2025Q3",
+          "pnl": 11153.121716438358
+        }
+      },
+      "rows": 360,
+      "trades": 13,
+      "quarter_rows": 4,
+      "by_corridor": [
+        {
+          "interconnector_id": "V-SA",
+          "from_region": "SA1",
+          "trades": 1,
+          "pnl": -1007.2672232876716,
+          "mean_alpha": -552.5123000000003
+        },
+        {
+          "interconnector_id": "VIC1-NSW1",
+          "from_region": "NSW1",
+          "trades": 12,
+          "pnl": -164630.43613013698,
+          "mean_alpha": -4386.267616666667
+        }
+      ],
+      "by_tranche": [
+        {
+          "tranche_no": 1,
+          "trades": 5,
+          "pnl": -77418.13574575342,
+          "mean_alpha": -3788.31448
+        },
+        {
+          "tranche_no": 2,
+          "trades": 1,
+          "pnl": -32059.511149315073,
+          "mean_alpha": -10500.1833
+        },
+        {
+          "tranche_no": 3,
+          "trades": 3,
+          "pnl": -19621.401434246574,
+          "mean_alpha": -2832.1324666666665
+        },
+        {
+          "tranche_no": 4,
+          "trades": 3,
+          "pnl": -38822.82005890411,
+          "mean_alpha": -5911.7661
+        },
+        {
+          "tranche_no": 6,
+          "trades": 1,
+          "pnl": 2284.1650347945206,
+          "mean_alpha": 2485.7277000000004
+        }
+      ],
+      "by_confidence_band": [
+        {
+          "confidence_band": "high",
+          "trades": 1,
+          "pnl": -1007.2672232876716,
+          "mean_alpha": -552.5123000000003
+        },
+        {
+          "confidence_band": "medium",
+          "trades": 4,
+          "pnl": -76410.86852246575,
+          "mean_alpha": -4597.265025
+        },
+        {
+          "confidence_band": "low",
+          "trades": 8,
+          "pnl": -88219.56760767124,
+          "mean_alpha": -4280.7689125
+        }
+      ]
+    }
+  },
+  "oos_gate": {
+    "status": "INSUFFICIENT_OOS_EVIDENCE",
+    "gate_checks": {
+      "min_trades": {
+        "required": 30,
+        "actual": 13,
+        "pass": false
+      },
+      "min_quarters": {
+        "required": 4,
+        "actual": 4,
+        "pass": true
+      },
+      "hit_rate": {
+        "required": 0.5,
+        "actual": 0.3076923076923077,
+        "pass": false
+      },
+      "mean_realised_alpha": {
+        "required": 0.0,
+        "actual": -4091.363361538461,
+        "pass": false
+      },
+      "profit_factor": {
+        "required": 1.25,
+        "actual": 0.06308654146520863,
+        "pass": false
+      },
+      "sharpe_ratio": {
+        "required": 1.0,
+        "actual": -1.1784980129767488,
+        "pass": false
+      },
+      "max_drawdown": {
+        "required": 0.25,
+        "actual": 0.0,
+        "pass": true
+      },
+      "max_single_trade_pnl_pct": {
+        "required": 0.2,
+        "actual": 0.2860171226060389,
+        "pass": false
+      },
+      "max_corridor_pnl_pct": {
+        "required": 0.4,
+        "actual": 0.9939188529972642,
+        "pass": false
+      }
+    },
+    "failures": [
+      "min_trades: 13 < 30",
+      "hit_rate: 0.308 < 0.5",
+      "mean_realised_alpha: -4091.36 <= 0",
+      "profit_factor: 0.063 < 1.25",
+      "sharpe: -1.178 < 1.0",
+      "single_trade_concentration: 0.286 > 0.2",
+      "corridor_concentration: 0.994 > 0.4"
+    ],
+    "n_oos_trades": 13,
+    "n_oos_quarters": 4
+  },
+  "walk_forward": {
+    "status": "ok",
+    "settled_quarters_tested": 25,
+    "quarters_with_trades": 24,
+    "total_pnl": 2261184.6926419176,
+    "quarter_hit_rate": 0.5416666666666666,
+    "summary": {
+      "total_trades": 281,
+      "total_pnl": 2261184.6926419176,
+      "return_on_cost": 1.3323385026340573,
+      "hit_rate": 0.4875444839857651,
+      "profit_factor": 2.3606462001073396
+    }
+  },
+  "benchmarks": {
+    "buy_all": {
+      "label": "IN_SAMPLE_HEURISTIC \u2014 not investable evidence",
+      "status": "ok",
+      "start_capital": 50000.0,
+      "end_capital": 17029858.203545205,
+      "total_pnl": 16979858.203545205,
+      "return_on_acquisition_cost": 0.1739708858019898,
+      "hit_rate": 0.45545977011494254,
+      "profit_factor": 1.4887158582222804,
+      "sharpe_ratio": 0.18893251257490098,
+      "volatility_quarterly": 0.9208096765929593,
+      "max_drawdown": 0.5216304353999999,
+      "trades": 1392,
+      "quarters_traded": 25,
+      "max_single_trade_contribution_pct": 0.03760634298995297,
+      "max_corridor_contribution_pct": 0.457483213247549,
+      "worst_quarter": {
+        "quarter": "C2026Q2",
+        "pnl": -3564344.7615524656
+      },
+      "best_quarter": {
+        "quarter": "C2022Q2",
+        "pnl": 8707519.177792056
+      },
+      "benchmark": "buy_all"
+    },
+    "cheapest_products": {
+      "label": "IN_SAMPLE_HEURISTIC \u2014 not investable evidence",
+      "status": "ok",
+      "start_capital": 50000.0,
+      "end_capital": -3071887.4421235607,
+      "total_pnl": -3121887.4421235607,
+      "return_on_acquisition_cost": -0.4690128987011542,
+      "hit_rate": 0.449438202247191,
+      "profit_factor": 0.7209502142954918,
+      "sharpe_ratio": -0.13686900539949137,
+      "volatility_quarterly": 3.426728332920998,
+      "max_drawdown": 0.4493153304438357,
+      "trades": 445,
+      "quarters_traded": 25,
+      "max_single_trade_contribution_pct": 0.09787462222079855,
+      "max_corridor_contribution_pct": 2.9676219345502575,
+      "worst_quarter": {
+        "quarter": "C2024Q4",
+        "pnl": -2888284.252446712
+      },
+      "best_quarter": {
+        "quarter": "C2022Q3",
+        "pnl": 930904.8044528767
+      },
+      "benchmark": "cheapest"
+    },
+    "highest_historical_payout": {
+      "label": "IN_SAMPLE_HEURISTIC \u2014 not investable evidence",
+      "status": "ok",
+      "start_capital": 50000.0,
+      "end_capital": 2871776.6318958905,
+      "total_pnl": 2821776.6318958905,
+      "return_on_acquisition_cost": 0.37304604073284714,
+      "hit_rate": 0.5894736842105263,
+      "profit_factor": 3.6918535751654513,
+      "sharpe_ratio": 0.13389099644516284,
+      "volatility_quarterly": 2.7861921311910915,
+      "max_drawdown": 0.3476628764712331,
+      "trades": 190,
+      "quarters_traded": 22,
+      "max_single_trade_contribution_pct": 0.07784172975180557,
+      "max_corridor_contribution_pct": 0.5479793377584194,
+      "worst_quarter": {
+        "quarter": "C2026Q2",
+        "pnl": -387003.2059580822
+      },
+      "best_quarter": {
+        "quarter": "C2023Q3",
+        "pnl": 880959.1136735617
+      },
+      "benchmark": "highest_historical_payout"
+    },
+    "no_trade": {
+      "benchmark": "no_trade",
+      "status": "ok",
+      "label": "IN_SAMPLE_HEURISTIC \u2014 not investable evidence",
+      "start_capital": 50000.0,
+      "end_capital": 50000.0,
+      "total_pnl": 0.0,
+      "return_on_acquisition_cost": 0.0,
+      "hit_rate": null,
+      "profit_factor": null,
+      "sharpe_ratio": null,
+      "max_drawdown": 0.0
+    }
+  },
+  "go_no_go": {
+    "classification": "AMBER",
+    "rationale": "Walk-forward positive vs no-trade but OOS gates not fully met. More settled quarters needed.",
+    "oos_gate_status": "INSUFFICIENT_OOS_EVIDENCE",
+    "walk_forward_quarters_with_trades": 24,
+    "walk_forward_total_pnl": 2261184.6926419176,
+    "walk_forward_quarter_hit_rate": 0.5416666666666666,
+    "in_sample_label": "IN_SAMPLE_HEURISTIC \u2014 not investable evidence",
+    "in_sample_note": "The $50k->$15.1m in-sample result reflects a heuristic with no look-ahead bias in the data, but the strategy has not been validated on genuinely unseen quarters. It is NOT investable evidence.",
+    "next_steps": [
+      "Wait for more settled quarters (target: 4+ OOS quarters with trades).",
+      "Review why OOS has few/no trades \u2014 check thresholds vs settled data.",
+      "Do not deploy capital until OOS gates pass."
+    ]
+  },
+  "note": "IN_SAMPLE_HEURISTIC result is not investable evidence. See oos_gate and walk_forward for evidence quality assessment."
+}

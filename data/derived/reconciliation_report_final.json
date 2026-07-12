@@ -1,0 +1,109 @@
+{
+  "timestamp": "2026-07-12T10:08:46.422259",
+  "thresholds": {
+    "total_pct": 0.01,
+    "category_pct": 0.051
+  },
+  "quarters": [
+    {
+      "quarter": "C2024Q4",
+      "total_aucunits_aud": 0.0,
+      "total_reconstructed_residue_aud": 0.0,
+      "total_gap_aud": 0.0,
+      "total_gap_pct": 0.0,
+      "max_category_gap_pct": 0.0,
+      "num_categories": 0,
+      "certification_status": "NO_COMPARABLES",
+      "errors": [
+        "No comparable categories in C2024Q4"
+      ]
+    },
+    {
+      "quarter": "C2025Q1",
+      "total_aucunits_aud": 0.0,
+      "total_reconstructed_residue_aud": 0.0,
+      "total_gap_aud": 0.0,
+      "total_gap_pct": 0.0,
+      "max_category_gap_pct": 0.0,
+      "num_categories": 0,
+      "certification_status": "NO_COMPARABLES",
+      "errors": [
+        "No comparable categories in C2025Q1"
+      ]
+    },
+    {
+      "quarter": "C2025Q2",
+      "total_aucunits_aud": 0.0,
+      "total_reconstructed_residue_aud": 0.0,
+      "total_gap_aud": 0.0,
+      "total_gap_pct": 0.0,
+      "max_category_gap_pct": 0.0,
+      "num_categories": 0,
+      "certification_status": "NO_COMPARABLES",
+      "errors": [
+        "No comparable categories in C2025Q2"
+      ]
+    },
+    {
+      "quarter": "C2025Q3",
+      "total_aucunits_aud": 90188182.45154528,
+      "total_reconstructed_residue_aud": 90330565.88500497,
+      "total_gap_aud": 142383.43345968425,
+      "total_gap_pct": 0.0015787371425982724,
+      "max_category_gap_pct": 0.05088804722171281,
+      "num_categories": 6,
+      "certification_status": "PASS",
+      "errors": []
+    },
+    {
+      "quarter": "C2025Q4",
+      "total_aucunits_aud": 68775625.50614065,
+      "total_reconstructed_residue_aud": 112939174.7433,
+      "total_gap_aud": 44163549.23715936,
+      "total_gap_pct": 0.6421395503442743,
+      "max_category_gap_pct": 1.1152146286747375,
+      "num_categories": 6,
+      "certification_status": "NOT_YET",
+      "errors": []
+    },
+    {
+      "quarter": "C2026Q1",
+      "total_aucunits_aud": 102169451.40417498,
+      "total_reconstructed_residue_aud": 120402220.10437,
+      "total_gap_aud": 18232768.700195014,
+      "total_gap_pct": 0.17845616717728566,
+      "max_category_gap_pct": 6.507937840851599,
+      "num_categories": 6,
+      "certification_status": "NOT_YET",
+      "errors": []
+    },
+    {
+      "quarter": "C2026Q2",
+      "total_aucunits_aud": 51104867.03320072,
+      "total_reconstructed_residue_aud": 321569887.71985,
+      "total_gap_aud": 270465020.68664926,
+      "total_gap_pct": 5.292353476058148,
+      "max_category_gap_pct": 7.321294425842875,
+      "num_categories": 6,
+      "certification_status": "NOT_YET",
+      "errors": []
+    },
+    {
+      "quarter": "C2026Q3",
+      "total_aucunits_aud": 2286297.40691107,
+      "total_reconstructed_residue_aud": 3536925.49028,
+      "total_gap_aud": 1250628.08336893,
+      "total_gap_pct": 0.5470102356712229,
+      "max_category_gap_pct": 17.80901260465089,
+      "num_categories": 8,
+      "certification_status": "NOT_YET",
+      "errors": []
+    }
+  ],
+  "summary": {
+    "total_quarters": 8,
+    "passed": 1,
+    "not_yet": 4,
+    "errors": 3
+  }
+}

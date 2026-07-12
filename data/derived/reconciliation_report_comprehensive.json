@@ -1,0 +1,70 @@
+{
+  "timestamp": "2026-07-12T10:20:03.813973",
+  "thresholds": {
+    "total_pct": 0.01,
+    "category_pct": 0.051
+  },
+  "quarters": [
+    {
+      "quarter": "C2025Q3",
+      "total_aucunits_aud": 90188182.45154528,
+      "total_reconstructed_residue_aud": 90330565.88500497,
+      "total_gap_aud": 142383.43345968425,
+      "total_gap_pct": 0.0015787371425982724,
+      "max_category_gap_pct": 0.05088804722171281,
+      "num_categories": 6,
+      "certification_status": "PASS",
+      "errors": []
+    },
+    {
+      "quarter": "C2025Q4",
+      "total_aucunits_aud": 68775625.50614065,
+      "total_reconstructed_residue_aud": 51377828.21903397,
+      "total_gap_aud": -17397797.287106678,
+      "total_gap_pct": 0.25296458096994423,
+      "max_category_gap_pct": 0.4891680511474612,
+      "num_categories": 6,
+      "certification_status": "NOT_YET",
+      "errors": []
+    },
+    {
+      "quarter": "C2026Q1",
+      "total_aucunits_aud": 102169451.40417498,
+      "total_reconstructed_residue_aud": 103149145.36234294,
+      "total_gap_aud": 979693.9581679553,
+      "total_gap_pct": 0.009588912778755723,
+      "max_category_gap_pct": 1.862483226471918,
+      "num_categories": 6,
+      "certification_status": "NOT_YET",
+      "errors": []
+    },
+    {
+      "quarter": "C2026Q2",
+      "total_aucunits_aud": 51104867.03320072,
+      "total_reconstructed_residue_aud": 67476205.25758997,
+      "total_gap_aud": 16371338.224389248,
+      "total_gap_pct": 0.32034792720923166,
+      "max_category_gap_pct": 31.297436279647133,
+      "num_categories": 6,
+      "certification_status": "NOT_YET",
+      "errors": []
+    },
+    {
+      "quarter": "C2026Q3",
+      "total_aucunits_aud": 2286297.40691107,
+      "total_reconstructed_residue_aud": 8704025.646295002,
+      "total_gap_aud": 6417728.239383932,
+      "total_gap_pct": 2.8070399852548853,
+      "max_category_gap_pct": 17.85144948730611,
+      "num_categories": 8,
+      "certification_status": "NOT_YET",
+      "errors": []
+    }
+  ],
+  "summary": {
+    "total_quarters": 5,
+    "passed": 1,
+    "not_yet": 4,
+    "errors": 0
+  }
+}

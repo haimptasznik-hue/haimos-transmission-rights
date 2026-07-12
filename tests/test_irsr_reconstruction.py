@@ -70,6 +70,30 @@ def test_reconstruct_irsr_quarterly() -> None:
     assert float(qld_row["residue_aud"]) == 200.0
 
 
+def test_reconstruct_irsr_quarterly_averages_within_trading_interval() -> None:
+    csv_data = "\n".join(
+        [
+            "I,DISPATCH,IRSR,2,TRADING_INTERVAL,INTERCONNECTORID,FROMREGIONID,RESIDUE",
+            'D,DISPATCH,IRSR,2,"2026/07/11 13:05:00",NSW1-QLD1,NSW1,100',
+            'D,DISPATCH,IRSR,2,"2026/07/11 13:10:00",NSW1-QLD1,NSW1,200',
+            'D,DISPATCH,IRSR,2,"2026/07/11 13:35:00",NSW1-QLD1,NSW1,50',
+        ]
+    )
+    content = _build_dispatch_zip(csv_data)
+    fetcher = HistoricalDataFetcher()
+    filename = "PUBLIC_DISPATCH_IRSR_202607111315_0000000000000002.zip"
+    fetcher.cached_files[filename] = content
+
+    df = fetcher.reconstruct_irsr_quarterly([filename])
+
+    assert len(df) == 1
+    row = df.iloc[0]
+    assert row["quarter"] == "C2026Q3"
+    assert row["interconnector_id"] == "NSW1-QLD1"
+    assert row["from_region"] == "NSW1"
+    assert float(row["residue_aud"]) == 200.0
+
+
 def test_reconcile_dispatch_vs_auction_units() -> None:
     fetcher = HistoricalDataFetcher()
     dispatch_df = pd.DataFrame(
