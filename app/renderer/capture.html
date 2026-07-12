@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Quick Capture</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #161b22; color: #e6edf3;
+      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 13px; overflow: hidden;
+      border-radius: 10px;
+    }
+    #header {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 14px 6px;
+      background: #21262d; border-bottom: 1px solid #30363d;
+      -webkit-app-region: drag;
+    }
+    #header span { font-weight: 600; font-size: 12px; color: #8b949e; }
+    #content { padding: 10px 14px 12px; display: flex; flex-direction: column; gap: 8px; }
+    #title-input, #body-input {
+      background: #0d1117; border: 1px solid #30363d;
+      color: #e6edf3; border-radius: 6px; padding: 7px 10px;
+      font-size: 13px; font-family: inherit; outline: none; width: 100%;
+    }
+    #title-input:focus, #body-input:focus { border-color: #2563eb; }
+    #body-input { resize: none; height: 60px; }
+    #footer { display: flex; gap: 8px; align-items: center; }
+    #save-btn {
+      background: #2563eb; color: #fff; border: none;
+      border-radius: 6px; padding: 6px 16px; font-size: 12px;
+      font-weight: 600; cursor: pointer; flex-shrink: 0;
+    }
+    #save-btn:hover { opacity: 0.85; }
+    #feedback { font-size: 11px; color: #3fb950; }
+  </style>
+</head>
+<body>
+  <div id="header"><span>⬡ HaimOS — Quick Capture</span></div>
+  <div id="content">
+    <input id="title-input" type="text" placeholder="Note title…" autofocus>
+    <textarea id="body-input" placeholder="What's on your mind?"></textarea>
+    <div id="footer">
+      <button id="save-btn">Save to Inbox</button>
+      <span id="feedback"></span>
+    </div>
+  </div>
+  <script>
+    const titleEl    = document.getElementById('title-input');
+    const bodyEl     = document.getElementById('body-input');
+    const saveBtn    = document.getElementById('save-btn');
+    const feedbackEl = document.getElementById('feedback');
+
+    saveBtn.addEventListener('click', async () => {
+      const title   = titleEl.value.trim();
+      const content = bodyEl.value.trim();
+      if (!title && !content) return;
+      try {
+        const result = await window.haimos.saveNote({ title: title || 'Quick Note', content });
+        if (result.success) {
+          feedbackEl.textContent = '✓ Saved!';
+          setTimeout(() => window.haimos.closeCapture(), 800);
+        }
+      } catch(e) { feedbackEl.textContent = '✗ ' + e.message; }
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') window.haimos.closeCapture();
+      if (e.key === 'Enter' && e.metaKey) saveBtn.click();
+    });
+  </script>
+</body>
+</html>

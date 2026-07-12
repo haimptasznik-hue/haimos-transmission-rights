@@ -1,0 +1,32 @@
+{
+  "name": "haimos-transmission-rights",
+  "version": "1.0.0",
+  "description": "HaimOS — Transmission Rights Dashboard",
+  "main": "main.js",
+  "author": "Haim",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --mac"
+  },
+  "build": {
+    "appId": "com.refuel.haimos-transmission-rights",
+    "productName": "HaimOS Transmission Rights",
+    "asar": false,
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "assets/icon.icns"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/.cache"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "3d-force-graph": "^1.80.0"
+  }
+}
