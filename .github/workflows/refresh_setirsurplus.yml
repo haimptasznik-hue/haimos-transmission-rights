@@ -1,0 +1,93 @@
+name: Refresh SETIRSURPLUS Closed Quarters
+
+on:
+  # Run on the 5th of Jan, Apr, Jul, Oct — 5 days after each quarter closes.
+  # That gives AEMO time to publish final billing runs before we pull data.
+  schedule:
+    - cron: '0 2 5 1,4,7,10 *'   # 02:00 UTC on the 5th of each quarter-open month
+
+  # Also allow manual trigger (e.g. to force a backfill)
+  workflow_dispatch:
+    inputs:
+      from_month:
+        description: 'Earliest month to (re)download, e.g. 2021-01'
+        required: false
+        default: ''
+      refresh_all:
+        description: 'Re-download all months (true/false)'
+        required: false
+        default: 'false'
+
+jobs:
+  refresh-data:
+    name: Download new SETIRSURPLUS months and rebuild closed-quarter dataset
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write   # needed to commit updated CSVs back
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install --upgrade pip requests pandas
+
+      - name: Determine download range
+        id: range
+        run: |
+          # Default: download from 3 months back (covers the quarter that just closed)
+          FROM_MONTH="${{ github.event.inputs.from_month }}"
+          if [ -z "$FROM_MONTH" ]; then
+            FROM_MONTH=$(python3 -c "
+          from datetime import date, timedelta
+          d = date.today() - timedelta(days=90)
+          print(f'{d.year}-{d.month:02d}')
+          ")
+          fi
+          echo "from_month=$FROM_MONTH" >> $GITHUB_OUTPUT
+          echo "Downloading from $FROM_MONTH"
+
+      - name: Download SETIRSURPLUS from NEMWEB
+        env:
+          REFRESH_ALL: ${{ github.event.inputs.refresh_all }}
+        run: |
+          ARGS="--from ${{ steps.range.outputs.from_month }}"
+          if [ "$REFRESH_ALL" = "true" ]; then
+            ARGS="--from 2021-01 --refresh"
+          fi
+          python scripts/download_setirsurplus.py $ARGS
+
+      - name: Build closed-quarter dataset
+        run: python scripts/build_closed_quarter_setirsurplus.py
+
+      - name: Show what changed
+        run: |
+          python - <<'EOF'
+          import pandas as pd
+          df = pd.read_csv("data/derived/irsr/setirsurplus_quarterly_closed.csv")
+          print(f"Closed quarters: {sorted(df['quarter'].unique())}")
+          print(f"Total rows: {len(df)}")
+          print(df.groupby('quarter')['surplus_aud'].sum().round(0).to_string())
+          EOF
+
+      - name: Commit updated data files
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/raw/aemo/setirsurplus/
+          git add data/derived/irsr/setirsurplus_quarterly_all.csv
+          git add data/derived/irsr/setirsurplus_quarterly_closed.csv
+          # Only commit if something actually changed
+          git diff --cached --quiet \
+            && echo "No changes — data already up to date" \
+            || git commit -m "chore(data): refresh SETIRSURPLUS closed quarters [$(date -u +%Y-%m-%d)]"
+
+      - name: Push changes
+        run: git push
