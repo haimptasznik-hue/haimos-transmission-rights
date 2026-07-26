@@ -1,0 +1,19 @@
+{
+  "quarter": "C2024Q4",
+  "present_in_selector_matrix": true,
+  "eligible": true,
+  "market_state_intervals": 26495,
+  "gates": {
+    "has_market_state": true,
+    "has_official_quarterly_irsr": true,
+    "has_payout_per_unit": true,
+    "has_auction_clearing": true,
+    "has_ruleset": true,
+    "has_unit_category": true,
+    "has_max_units": true,
+    "has_unit_proportion": true,
+    "has_auction_units_weekly": true
+  },
+  "failed_gates": [],
+  "selected_quarter": "C2024Q4"
+}

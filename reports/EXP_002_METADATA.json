@@ -1,0 +1,13 @@
+{
+  "input": "reports/2024Q4_TRANSFER_STATE_TABLE.csv",
+  "primary_sample_size": 26362,
+  "intervention_rows_excluded": 12,
+  "baseline_r2": 0.0562868892761027,
+  "extended_r2": 0.359863921782839,
+  "incremental_r2": 0.3035770325067363,
+  "directional_accuracy": 0.7979893778452201,
+  "near_limit_incremental_r2": 0.5351190423958695,
+  "monthly_stable": true,
+  "verdict": "CONDITIONALLY_ACCEPTED",
+  "research_value_score": 66.94
+}

@@ -1,0 +1,21 @@
+# 2024Q4 Transfer State Quality
+
+- Rows produced: 26374
+- Expected intervals: 26376
+- Actual intervals: 26374
+- Interval coverage pct: 99.992417
+- Duplicate canonical keys: 0
+- Missing demand: 0
+- Missing generation: 0
+- Missing flow: 0
+- Missing limits: 0
+- Missing losses: 0
+- Missing marginal value: 0
+- Missing publication timestamps: 0
+- Lineage completeness pct: 100.000000
+- Intervention rows excluded: 72
+- Intervention pairs: 72
+- Intervention pairs identical: 3
+- Intervention pairs differing: 69
+- Five-minute continuity gaps: 2
+- Validation failures: none
