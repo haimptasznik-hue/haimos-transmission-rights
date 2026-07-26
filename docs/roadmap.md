@@ -32,3 +32,18 @@
 - support indicative OTC pricing
 - design assignment workflow orchestration
 - evaluate marketplace and agency models
+
+## Phase 6
+
+- establish the Market Physics Research Program
+- define and validate the Market State Ontology
+- pre-register market physics laws and experiments
+- keep the Digital Twin frozen during research
+
+### Phase 6B.0
+
+- design the congestion causality tree
+- build the mechanism catalogue
+- rank mechanisms by physical plausibility and research value
+- choose the next experiment from the catalogue, not from residual intuition
+

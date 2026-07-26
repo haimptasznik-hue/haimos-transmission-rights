@@ -14,3 +14,110 @@ build/
 # Electron app
 app/node_modules/
 app/dist/
+
+# ---------------------------------------------------------------------------
+# Raw AEMO data (5.41 GB total; re-downloadable from NEMWEB)
+# ---------------------------------------------------------------------------
+data/raw/aemo/
+
+# ---------------------------------------------------------------------------
+# Derived cache datasets (reproducible from pipeline)
+# ---------------------------------------------------------------------------
+data/derived/
+
+# ---------------------------------------------------------------------------
+# Temporary, profiling and debug artifacts
+# ---------------------------------------------------------------------------
+*.part
+reports/scalability_analysis.txt
+reports/phase5c_profile_bottleneck.json
+reports/phase5c5_dispatchprice_bulkload_profile.csv
+
+# ---------------------------------------------------------------------------
+# Bulk generated report outputs
+# Excluded by explicit file/directory-prefix patterns.
+# Blanket *.csv and *.json rules are intentionally NOT used.
+# Concise .md summaries, ingestion manifests, schema files and small metadata
+# JSONs are NOT matched by these patterns and remain visible to Git.
+# ---------------------------------------------------------------------------
+
+# Transfer-state bulk tables (52 MB and 7.8 MB)
+reports/2024Q4_TRANSFER_STATE_INTERVENTION_AUDIT.csv
+reports/2024Q4_TRANSFER_STATE_TABLE.csv
+
+# Experiment bulk data files
+reports/EXP_001_PREPARED_DATA.csv
+reports/EXP_001_RESULTS.csv
+reports/EXP_002_INTERVENTION_SENSITIVITY.csv
+reports/EXP_002_RESULTS.csv
+reports/FORECAST_CONTRIBUTION_REGISTER.csv
+
+# Backtest bulk trade logs
+reports/backtest_detailed_trades.csv
+reports/backtest_monthly_summary.csv
+
+# Iteration and PoC bulk output tables
+reports/iteration2_scenarios.csv
+reports/jan_2025_capital_constrained.csv
+reports/jan_2025_predicted_vs_actual.csv
+
+# Phase 4 attribution bulk tables
+reports/phase4_grouped_attribution.csv
+reports/phase4_trade_level_attribution.csv
+
+# Phase 4b component bulk tables
+# (phase4b_component_validation_summary.md is .md — not matched; remains visible)
+reports/phase4b_*.csv
+
+# Phase 5A model bulk outputs — all walk-forward and attribution CSVs
+# (concise PHASE5A*.md summaries are uppercase — .csv suffix prevents any match)
+reports/phase5a*.csv
+
+# Phase 5B driver discovery bulk tables
+reports/phase5b_*.csv
+
+# Phase 5C3 validation bulk tables
+# (phase5c3_first_sra_test_plan.md and phase5c3_test_quarter_selection.md kept)
+reports/phase5c3_*.csv
+
+# Phase 5C4b compatibility and coverage bulk tables
+# (phase5c4_c2024q4_download_inventory.csv and phase5c4_c2024q4_source_inventory.csv
+#  use the phase5c4_ prefix — NOT matched by phase5c4b_ below; they remain visible)
+reports/phase5c4b_*.csv
+
+# Phase 5C5 profiling tables
+reports/phase5c5_*.csv
+
+# Phase 5C6 unknown-direction and corridor mapping bulk tables
+reports/phase5c6_*.csv
+
+# Phase 5C7 forensic payout bulk tables
+reports/phase5c7_*.csv
+
+# Phase 5C8 concept-test bulk tables
+# (PHASE5C8_FIRST_HISTORICAL_SRA_CONCEPT_TEST.md and PHASE5C8_FINAL_READINESS.md kept)
+reports/phase5c8_*.csv
+
+# Phase 5C ingestion bulk outputs
+# The following patterns do NOT match the three ingestion manifests or schema:
+#   phase5c_dispatchinterconnectorres_ingestion_manifest.csv  — kept
+#   phase5c_dispatchprice_ingestion_manifest.csv              — kept
+#   phase5c_dispatchregionsum_ingestion_manifest.csv          — kept
+#   phase5c_market_state_schema.csv                          — kept
+reports/phase5c_*_failed_files.csv
+reports/phase5c_driver_attribution.csv
+reports/phase5c_feature_store_*.csv
+reports/phase5c_ingestion_lineage.csv
+reports/phase5c_ingestion_validation.csv
+reports/phase5c_market_state.csv
+reports/phase5c_nsw1_qld1_*.csv
+reports/phase5c_pit_coverage_report.csv
+reports/phase5c_stage*.csv
+reports/phase5c_walkforward_results.csv
+
+# Phase 5C JSON diagnostics (bulk; small committed metadata JSONs are not affected)
+reports/phase5c_nsw1_qld1_validation_diagnostics.json
+
+# Superseded bulk artifacts (identified in ARTIFACT_RETENTION_REVIEW.md)
+# Note: most are already covered by phase5a*.csv and phase5c8_*.csv above.
+reports/forensic_first_vic_nsw_loss.json

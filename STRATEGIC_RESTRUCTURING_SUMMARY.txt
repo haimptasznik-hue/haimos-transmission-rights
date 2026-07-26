@@ -1,0 +1,294 @@
+═══════════════════════════════════════════════════════════════════
+HAIMOS Market Physics Engine — Phase 6 Strategic Restructuring
+Date: 2026-07-15
+═══════════════════════════════════════════════════════════════════
+
+FROM: Quantitative Trading Model (Phase 5C Pattern-Finding)
+TO:   Energy Systems Physics Research (Phase 6 Causal Understanding)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+KEY MINDSET SHIFTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. FROM "Forecasting"
+   TO   "State Estimation + Physics Application"
+   
+   • Old: Predict prices directly from historical patterns
+   • New: Know the current physical state (Level 2)
+           Apply validated physics laws (arrows)
+           Derive market outcomes (Level 3)
+
+2. FROM "Congestion Research"
+   TO   "Market Physics Research"
+   
+   • Old: Explain congestion specifically
+   • New: Understand the physical laws creating all market outcomes
+           Congestion is just one observable manifestation
+
+3. FROM "Code = Research"
+   TO   "Understanding = Research; Code is Implementation Detail"
+   
+   • Old: Build a model; output = predictions
+   • New: Design experiments; output = validated causal relationships
+           Code is the tool to gather evidence
+
+4. FROM "Correlation Hunting"
+   TO   "Mechanism Validation"
+   
+   • Old: "Temperature correlates with demand"
+   • New: "Temperature drives demand through AC load; quantify effect,
+            identify boundary conditions (summer vs. winter),
+            estimate residual drivers"
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NEW ROLE: Chief Research Analyst (Energy Systems Engineer)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Your job is NOT to code.
+
+Your job is to:
+1. Design arrow experiments (causal relationships)
+2. Challenge assumptions ruthlessly
+3. Reject weak hypotheses before investing engineering time
+4. Quantify uncertainty precisely
+5. Decide what evidence is needed next
+
+The implementation agent handles code as a service to your research.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+CAUSAL HIERARCHY (Your Mental Model)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Level 1: Physical Drivers
+  ├─ Temperature
+  ├─ Wind generation
+  ├─ Solar generation
+  ├─ Coal availability
+  ├─ Hydro availability
+  ├─ Battery state
+  ├─ Interconnector status
+  └─ Generator constraints
+         ↓ [Arrow-by-arrow validation]
+         
+Level 2: Network Physics
+  ├─ Regional power flows
+  ├─ Constraint equations
+  ├─ Interconnector utilisation
+  ├─ Congestion hours
+  ├─ Regional price separation
+  ├─ Marginal generators
+  └─ Voltage stability
+         ↓ [Arrow-by-arrow validation]
+         
+Level 3: Market Outcomes
+  ├─ Dispatch prices
+  ├─ IRSR (quarterly residues)
+  ├─ Regional residues
+  ├─ SRA payouts
+  └─ Volatility regimes
+         ↓ [Investment decision ONLY here]
+         
+Level 4: Investment Decisions
+  ├─ SRA portfolio construction
+  ├─ Hedging ratios
+  ├─ Capital allocation
+  └─ Risk management
+
+KEY PRINCIPLE: Do NOT jump to Level 4 until Level 1→2 and Level 2→3
+              physics are validated. Do NOT implement Layer 4 code
+              without causal evidence.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+RESEARCH FRAMEWORK: Arrow-by-Arrow Validation
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Each arrow = one testable causal relationship
+
+Example: ARROW_001 — Temperature → Regional Demand
+
+Process:
+1. Design (Pre-register criteria BEFORE code):
+   • Does temperature drive demand?
+   • Acceptance: ρ > 0.5 in NSW1, VIC1, SA1
+   • Rejection: ρ < 0.2 all regions OR reversal by season
+   • Data: C2024Q4 DISPATCHREGIONSUM + BOM temp (PIT-safe)
+
+2. Implement (Agent runs code):
+   • Load data
+   • Compute correlation by region
+   • Test lagged effects
+   • Output: CSV + markdown result
+
+3. Analyze (You as Chief Analyst):
+   • Challenge result: Holds across ALL subsamples?
+   • Boundary conditions: When does it hold/break?
+   • Residuals: XX% of variance unexplained (why?)
+   • Record in Research Journal
+
+4. Record (Update central models):
+   • Add LAW to MARKET_PHYSICS_MODEL.md
+   • Mark entry in Research Journal index
+   • Decide next arrow
+
+Result: Every arrow is documented, every relationship is quantified,
+        every conclusion is pre-registered and testable.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PHASE 6 TIMELINE (10 Weeks)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Weeks 1–2:   ARROW_001, ARROW_002 (Level 1→2: Temperature, Wind)
+Weeks 3–4:   ARROW_003, ARROW_004 (Level 1→2: Coal, Economics)
+Weeks 5–8:   ARROW_006–009 (Level 2→3: Utilisation, Imbalance, etc.)
+Weeks 9–10:  ARROW_010 (Composite validation: Full chain)
+
+OUTCOME: 10 validated arrows in MARKET_PHYSICS_MODEL.md
+         Quarterly IRSR predictable with >75% R²
+         Causal graph complete; forecasting model foundation built
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NEW DOCUMENTS CREATED
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. PHASE6_README.md (this directory)
+   → High-level overview of Phase 6 research
+
+2. PHASE6_QUICK_START.md (this directory)
+   → This week's action items (2.5 hours of work)
+
+3. CHIEF_RESEARCH_ANALYST_ROLE.md (this directory)
+   → Complete job description of your new role
+
+4. PHASE6_CAUSAL_CONGESTION_RESEARCH.md (this directory)
+   → Full roadmap: hierarchy, experiment examples, sequence
+
+5. docs/MARKET_PHYSICS_MODEL.md (NEW)
+   → Central repository for validated causal laws
+   → You populate as arrows are validated
+
+6. docs/Research Journal.md (UPDATED)
+   → Laboratory notebook for every arrow experiment
+   → Pre-registration template; arrow-by-arrow entry format
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+KEY RULES FOR PHASE 6
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ MUST DO:
+   • Pre-register acceptance/rejection criteria BEFORE any code
+   • Use Point-in-Time-safe data (no future information)
+   • Test across subsamples (regions, seasons, hours)
+   • Document boundary conditions explicitly
+   • Quantify uncertainty (confidence level, residuals)
+   • Test generalizability
+
+❌ MUST NOT:
+   • Change Digital Twin logic (Layer 3 frozen)
+   • Assume correlation = causation without mechanism
+   • Build forecasting models before physics validated
+   • Cherry-pick thresholds after seeing results
+   • Hide unexplained variance
+   • Over-commit to weak arrows (ρ < 0.4)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+HOW TO WORK WITH IMPLEMENTATION AGENT
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+YOU DESIGN. AGENT IMPLEMENTS.
+
+When requesting an experiment:
+
+"Test ARROW_001: Temperature → Regional Demand
+
+Pre-registered acceptance criteria:
+- Correlation ρ > 0.5 for at least 2/4 regions (NSW1, VIC1, QLD1, SA1)
+- Lagged effect at 4-hour horizon (ρ > 0.3)
+- Effect consistent across seasons (no reversal summer/winter)
+
+Rejection criteria:
+- ρ < 0.2 all regions
+- No lagged effect
+- Effect reverses by season
+
+Data: C2024Q4 DISPATCHREGIONSUM + BOM temperature
+      PIT cut-off: 2024-12-31T23:55:00Z
+
+Output:
+- ARROW_001_TEMPERATURE_DEMAND.csv (interval detail + statistics)
+- ARROW_001_RESULT.md (verdict + effect sizes + confidence)"
+
+Agent returns:
+- CSV with all interval-level calculations
+- Markdown with acceptance/rejection verdict and effect sizes
+
+You then:
+- Challenge the result across subsamples
+- Identify boundary conditions
+- Record in Research Journal
+- Update MARKET_PHYSICS_MODEL.md
+- Select next arrow
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+STARTING THIS WEEK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Read PHASE6_QUICK_START.md (10 min)
+2. Read CHIEF_RESEARCH_ANALYST_ROLE.md (20 min)
+3. Review ARROW_001 example (15 min)
+4. Design ARROW_001 in docs/Research Journal.md (30 min)
+   - Pre-register criteria
+   - Identify data sources
+   - Specify boundary conditions
+5. Brief implementation agent (10 min)
+6. Run experiment; analyze results (agent handles code)
+7. Record in MARKET_PHYSICS_MODEL.md (30 min)
+8. Select ARROW_002 (10 min)
+
+Total research time: ~2 hours
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PHASE 6 COMPLETION CRITERIA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+By end of Week 10:
+
+☐ 10 arrow experiments completed (ARROW_001 through ARROW_010)
+☐ 8+ arrows validated with confidence > 70%
+☐ MARKET_PHYSICS_MODEL.md populated with 8+ LAW entries
+☐ Causal graph shows Level 1 → Level 2 → Level 3 chain
+☐ Quarterly IRSR predictable with >75% R² using only pre-quarter state
+☐ Boundary conditions documented for every arrow
+☐ Residual drivers identified (<25% unexplained variance per arrow)
+☐ Research Journal complete with all entry details
+
+When all criteria met: Ready for Layer 4 Forecasting Implementation
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+This is not a code sprint.
+
+This is rigorous physics research.
+
+Every hypothesis is pre-registered.
+Every result is quantified.
+Every relationship is validated.
+Every boundary is documented.
+
+You are building the foundation for systematic market intelligence.
+
+The edge is not in predicting prices.
+The edge is in understanding why they change.
+
+Phase 6: Market Physics Research begins now.
+
+═══════════════════════════════════════════════════════════════════

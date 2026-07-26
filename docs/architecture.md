@@ -1,4 +1,4 @@
-# Architecture
+ok # Architecture
 
 ## Design principles
 
