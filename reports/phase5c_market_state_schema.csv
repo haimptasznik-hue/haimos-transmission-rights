@@ -1,0 +1,36 @@
+column,dtype,description
+interval_timestamp_utc,datetime,5-minute interval timestamp in UTC
+asof_publish_timestamp_utc,datetime,Timestamp when source record was published/ingested
+decision_cutoff_utc,datetime,Decision-time cutoff for PIT replay queries
+record_version,int,Monotonic version for re-ingested corrections
+record_source,str,Source table/file name
+corridor,str,"Interconnector corridor label (e.g., NSW1-QLD1)"
+direction,str,"Direction key for corridor (e.g., NSW1->QLD1)"
+ruleset_id,str,Commercial ruleset identifier
+nsw_rrp,float,NSW regional reference price
+qld_rrp,float,QLD regional reference price
+vic_rrp,float,VIC regional reference price
+sa_rrp,float,SA regional reference price
+tas_rrp,float,TAS regional reference price
+nsw_qld_spread,float,NSW minus QLD price spread
+mw_flow,float,Directional interconnector flow (MW)
+available_capability_mw,float,Available interconnector capability (MW)
+utilisation_pct,float,Absolute flow / capability percentage
+constraint_binding_flag,bool,Any binding constraint affecting corridor at interval
+constraint_marginal_value,float,Constraint marginal value (if binding)
+regional_operational_demand,float,Regional operational demand
+forecast_demand,float,Forecast demand at decision time
+demand_anomaly,float,Demand deviation vs seasonal normal
+renewable_penetration_pct,float,Renewable share of generation
+coal_availability_pct,float,Coal fleet available capacity percentage
+gas_availability_pct,float,Gas fleet available capacity percentage
+battery_net_dispatch_mw,float,Battery net charging/discharging
+temperature_c,float,Temperature
+wind_speed_ms,float,Wind speed
+solar_irradiance_wm2,float,Solar irradiance
+rainfall_mm,float,Rainfall
+network_outage_flag,bool,Whether major outage active
+irsr,float,Interval residue settlement amount
+sra_payout_per_unit,float,SRA payout per unit (closed-settlement only)
+auction_clearing_price,float,Auction clearing price reference
+units_sold,float,Auction units sold
