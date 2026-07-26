@@ -1,0 +1,486 @@
+[
+  {
+    "path": "reports/EXP_002_METADATA.json",
+    "count": 1,
+    "hits": [
+      {
+        "line": 2,
+        "sample_tail": "/...2024Q4_TRANSFER_STATE_TABLE.csv"
+      }
+    ]
+  },
+  {
+    "path": "reports/PHASE5C4_C2024Q4_DOWNLOAD_SUMMARY.md",
+    "count": 9,
+    "hits": [
+      {
+        "line": 27,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHPRICE%23FILE01%23202410010000.zip"
+      },
+      {
+        "line": 28,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHINTERCONNECTORRES%23FILE01%23202410010000.zip"
+      },
+      {
+        "line": 29,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHREGIONSUM%23FILE01%23202410010000.zip"
+      },
+      {
+        "line": 30,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHPRICE%23FILE01%23202411010000.zip"
+      },
+      {
+        "line": 31,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHINTERCONNECTORRES%23FILE01%23202411010000.zip"
+      },
+      {
+        "line": 32,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHREGIONSUM%23FILE01%23202411010000.zip"
+      },
+      {
+        "line": 33,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHPRICE%23FILE01%23202412010000.zip"
+      },
+      {
+        "line": 34,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHINTERCONNECTORRES%23FILE01%23202412010000.zip"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase4b_component_validation_summary.md",
+    "count": 1,
+    "hits": [
+      {
+        "line": 3,
+        "sample_tail": "/...phase4b_component_export_from_alpha.csv`"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c3_unit_payout_reconciliation.csv",
+    "count": 6,
+    "hits": [
+      {
+        "line": 4,
+        "sample_tail": "/...AUCUNITS_20241229.R015"
+      },
+      {
+        "line": 5,
+        "sample_tail": "/...AUCUNITS_20241229.R015"
+      },
+      {
+        "line": 10,
+        "sample_tail": "/...AUCUNITS_20241229.R015"
+      },
+      {
+        "line": 11,
+        "sample_tail": "/...AUCUNITS_20241229.R015"
+      },
+      {
+        "line": 12,
+        "sample_tail": "/...AUCUNITS_20241229.R015"
+      },
+      {
+        "line": 13,
+        "sample_tail": "/...AUCUNITS_20241229.R015"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c4_c2024q4_download_inventory.csv",
+    "count": 9,
+    "hits": [
+      {
+        "line": 2,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHPRICE%23FILE01%23202410010000.zip"
+      },
+      {
+        "line": 3,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHINTERCONNECTORRES%23FILE01%23202410010000.zip"
+      },
+      {
+        "line": 4,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHREGIONSUM%23FILE01%23202410010000.zip"
+      },
+      {
+        "line": 5,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHPRICE%23FILE01%23202411010000.zip"
+      },
+      {
+        "line": 6,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHINTERCONNECTORRES%23FILE01%23202411010000.zip"
+      },
+      {
+        "line": 7,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHREGIONSUM%23FILE01%23202411010000.zip"
+      },
+      {
+        "line": 8,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHPRICE%23FILE01%23202412010000.zip"
+      },
+      {
+        "line": 9,
+        "sample_tail": "/...PUBLIC_ARCHIVE%23DISPATCHINTERCONNECTORRES%23FILE01%23202412010000.zip"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c4b_c2024q4_filename_compatibility.csv",
+    "count": 18,
+    "hits": [
+      {
+        "line": 2,
+        "sample_tail": "/...PUBLIC_ARCHIVE#DISPATCHPRICE#FILE01#202410010000.zip"
+      },
+      {
+        "line": 2,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHPRICE_202410010000.zip"
+      },
+      {
+        "line": 3,
+        "sample_tail": "/...PUBLIC_ARCHIVE#DISPATCHPRICE#FILE01#202411010000.zip"
+      },
+      {
+        "line": 3,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHPRICE_202411010000.zip"
+      },
+      {
+        "line": 4,
+        "sample_tail": "/...PUBLIC_ARCHIVE#DISPATCHPRICE#FILE01#202412010000.zip"
+      },
+      {
+        "line": 4,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHPRICE_202412010000.zip"
+      },
+      {
+        "line": 5,
+        "sample_tail": "/...PUBLIC_ARCHIVE#DISPATCHINTERCONNECTORRES#FILE01#202410010000.zip"
+      },
+      {
+        "line": 5,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHINTERCONNECTORRES_202410010000.zip"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c7_payout_forensic_step_by_step.csv",
+    "count": 6,
+    "hits": [
+      {
+        "line": 4,
+        "sample_tail": "/...AUCUNITS_20241229.R015"
+      },
+      {
+        "line": 5,
+        "sample_tail": "/...AUCUNITS_20241229.R015"
+      },
+      {
+        "line": 10,
+        "sample_tail": "/...AUCUNITS_20241229.R015"
+      },
+      {
+        "line": 11,
+        "sample_tail": "/...AUCUNITS_20241229.R015"
+      },
+      {
+        "line": 12,
+        "sample_tail": "/...AUCUNITS_20241229.R015"
+      },
+      {
+        "line": 13,
+        "sample_tail": "/...AUCUNITS_20241229.R015"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c_dispatchinterconnectorres_cache_report.md",
+    "count": 2,
+    "hits": [
+      {
+        "line": 11,
+        "sample_tail": "/...phase5c_dispatchinterconnectorres_ingestion_manifest.csv`"
+      },
+      {
+        "line": 12,
+        "sample_tail": "/...phase5c_dispatchinterconnectorres_failed_files.csv`"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c_dispatchinterconnectorres_ingestion_manifest.csv",
+    "count": 12,
+    "hits": [
+      {
+        "line": 2,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHINTERCONNECTORRES_202001010000.zip"
+      },
+      {
+        "line": 2,
+        "sample_tail": "/...dispatchinterconnectorres_2ad63ace325e4c16d0d68c3fdfdaed32808d463e5c1fea4eca98e792886923cd.csv.gz"
+      },
+      {
+        "line": 3,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHINTERCONNECTORRES_202002010000.zip"
+      },
+      {
+        "line": 3,
+        "sample_tail": "/...dispatchinterconnectorres_50c2e4058b0d4c201742fdf8c97e4f6a8596a7d5d6877aa6ab7da6d9c42ca299.csv.gz"
+      },
+      {
+        "line": 4,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHINTERCONNECTORRES_202003010000.zip"
+      },
+      {
+        "line": 4,
+        "sample_tail": "/...dispatchinterconnectorres_569e791d97f246f522eca02f21fa06c362f4757ad41e299810b877a951744e7d.csv.gz"
+      },
+      {
+        "line": 5,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHINTERCONNECTORRES_202410010000.zip"
+      },
+      {
+        "line": 5,
+        "sample_tail": "/...dispatchinterconnectorres_2922092bf0c2538c6d9164b8a01f672716ae94815f5ba1e7b95ea02ac84117d0.csv.gz"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c_dispatchprice_cache_report.md",
+    "count": 2,
+    "hits": [
+      {
+        "line": 11,
+        "sample_tail": "/...phase5c_dispatchprice_ingestion_manifest.csv`"
+      },
+      {
+        "line": 12,
+        "sample_tail": "/...phase5c_dispatchprice_failed_files.csv`"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c_dispatchprice_ingestion_manifest.csv",
+    "count": 12,
+    "hits": [
+      {
+        "line": 2,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHPRICE_202001010000.zip"
+      },
+      {
+        "line": 2,
+        "sample_tail": "/...dispatchprice_081e910f9a7fec7179ac0f6a50297e4413fdf9258cca8b4794d16d994a31d5b2.csv.gz"
+      },
+      {
+        "line": 3,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHPRICE_202002010000.zip"
+      },
+      {
+        "line": 3,
+        "sample_tail": "/...dispatchprice_7b7b00b92621f0a7b4075e2280eef83dc19e5beeceeffc4fa5b3c616dc6895b2.csv.gz"
+      },
+      {
+        "line": 4,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHPRICE_202003010000.zip"
+      },
+      {
+        "line": 4,
+        "sample_tail": "/...dispatchprice_efa8127332cbd253069a8db30a6c8ecfea76e5825aadfdf5a1fa7029cf3befb7.csv.gz"
+      },
+      {
+        "line": 5,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHPRICE_202410010000.zip"
+      },
+      {
+        "line": 5,
+        "sample_tail": "/...dispatchprice_4d926848904278971554e934fa6ca9c54e15ad3e991cbd19e6f5d353c32a804e.csv.gz"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c_dispatchregionsum_cache_report.md",
+    "count": 2,
+    "hits": [
+      {
+        "line": 11,
+        "sample_tail": "/...phase5c_dispatchregionsum_ingestion_manifest.csv`"
+      },
+      {
+        "line": 12,
+        "sample_tail": "/...phase5c_dispatchregionsum_failed_files.csv`"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c_dispatchregionsum_ingestion_manifest.csv",
+    "count": 12,
+    "hits": [
+      {
+        "line": 2,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHREGIONSUM_202001010000.zip"
+      },
+      {
+        "line": 2,
+        "sample_tail": "/...dispatchregionsum_eee9880768d14b4ccc8b7c83391596b5274b9da1a7706f0828c357602cd79f6f.csv.gz"
+      },
+      {
+        "line": 3,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHREGIONSUM_202002010000.zip"
+      },
+      {
+        "line": 3,
+        "sample_tail": "/...dispatchregionsum_6b3fac287be5b904daf3d93623e4a6febf04c8d73c93b86b306f5a67278be81a.csv.gz"
+      },
+      {
+        "line": 4,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHREGIONSUM_202003010000.zip"
+      },
+      {
+        "line": 4,
+        "sample_tail": "/...dispatchregionsum_d348c9f91f8b4a5cd0fe4f9061867c59feadf4fc310ad7edb8792d989819e979.csv.gz"
+      },
+      {
+        "line": 5,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHREGIONSUM_202410010000.zip"
+      },
+      {
+        "line": 5,
+        "sample_tail": "/...dispatchregionsum_9f8f2e561c640d6c7e1d7b45a4dd5c275e6fcc9f49efe0521f575973a653998c.csv.gz"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c_driver_attribution.csv",
+    "count": 1,
+    "hits": [
+      {
+        "line": 2,
+        "sample_tail": "/...mmsdm_dispatchprice"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c_ingestion_lineage.csv",
+    "count": 1,
+    "hits": [
+      {
+        "line": 2,
+        "sample_tail": "/...mmsdm_dispatchprice"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c_nsw1_qld1_manual_reconciliation_20.csv",
+    "count": 20,
+    "hits": [
+      {
+        "line": 2,
+        "sample_tail": "/...dispatchregionsum_eee9880768d14b4ccc8b7c83391596b5274b9da1a7706f0828c357602cd79f6f.csv.gz"
+      },
+      {
+        "line": 3,
+        "sample_tail": "/...dispatchregionsum_eee9880768d14b4ccc8b7c83391596b5274b9da1a7706f0828c357602cd79f6f.csv.gz"
+      },
+      {
+        "line": 4,
+        "sample_tail": "/...dispatchregionsum_eee9880768d14b4ccc8b7c83391596b5274b9da1a7706f0828c357602cd79f6f.csv.gz"
+      },
+      {
+        "line": 5,
+        "sample_tail": "/...dispatchregionsum_eee9880768d14b4ccc8b7c83391596b5274b9da1a7706f0828c357602cd79f6f.csv.gz"
+      },
+      {
+        "line": 6,
+        "sample_tail": "/...dispatchregionsum_eee9880768d14b4ccc8b7c83391596b5274b9da1a7706f0828c357602cd79f6f.csv.gz"
+      },
+      {
+        "line": 7,
+        "sample_tail": "/...dispatchregionsum_eee9880768d14b4ccc8b7c83391596b5274b9da1a7706f0828c357602cd79f6f.csv.gz"
+      },
+      {
+        "line": 8,
+        "sample_tail": "/...dispatchregionsum_eee9880768d14b4ccc8b7c83391596b5274b9da1a7706f0828c357602cd79f6f.csv.gz"
+      },
+      {
+        "line": 9,
+        "sample_tail": "/...dispatchregionsum_eee9880768d14b4ccc8b7c83391596b5274b9da1a7706f0828c357602cd79f6f.csv.gz"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c_stage1_manual_reconciliation.csv",
+    "count": 20,
+    "hits": [
+      {
+        "line": 2,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHINTERCONNECTORRES_202401010000.zip"
+      },
+      {
+        "line": 3,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHINTERCONNECTORRES_202401010000.zip"
+      },
+      {
+        "line": 4,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHINTERCONNECTORRES_202401010000.zip"
+      },
+      {
+        "line": 5,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHINTERCONNECTORRES_202401010000.zip"
+      },
+      {
+        "line": 6,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHINTERCONNECTORRES_202401010000.zip"
+      },
+      {
+        "line": 7,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHINTERCONNECTORRES_202401010000.zip"
+      },
+      {
+        "line": 8,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHINTERCONNECTORRES_202401010000.zip"
+      },
+      {
+        "line": 9,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHINTERCONNECTORRES_202401010000.zip"
+      }
+    ]
+  },
+  {
+    "path": "reports/phase5c_stage23_market_state_sample.csv",
+    "count": 30,
+    "hits": [
+      {
+        "line": 2,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHCONSTRAINT_202401010000.zip"
+      },
+      {
+        "line": 3,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHCONSTRAINT_202401010000.zip"
+      },
+      {
+        "line": 4,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHCONSTRAINT_202401010000.zip"
+      },
+      {
+        "line": 5,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHCONSTRAINT_202401010000.zip"
+      },
+      {
+        "line": 6,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHCONSTRAINT_202401010000.zip"
+      },
+      {
+        "line": 7,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHCONSTRAINT_202401010000.zip"
+      },
+      {
+        "line": 8,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHCONSTRAINT_202401010000.zip"
+      },
+      {
+        "line": 9,
+        "sample_tail": "/...PUBLIC_DVD_DISPATCHCONSTRAINT_202401010000.zip"
+      }
+    ]
+  }
+]

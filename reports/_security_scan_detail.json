@@ -1,0 +1,61 @@
+[
+  {
+    "path": "scripts/build_c2024q4_transfer_constraint_table.py",
+    "matches": [
+      {
+        "category": "token_assignment",
+        "line": 35,
+        "context": "s(quarter: str) -> tuple[str, str]:\n    token = quarter.strip().upper()\n    if len(toke"
+      },
+      {
+        "category": "token_assignment",
+        "line": 51,
+        "context": "start_month and args.end_month:\n        token = f\"{args.start_month.replace('-', '')}_{"
+      }
+    ]
+  },
+  {
+    "path": "scripts/mmsdm_source_utils.py",
+    "matches": []
+  },
+  {
+    "path": "scripts/phase5c_first_principles_pipeline.py",
+    "matches": [
+      {
+        "category": "token_assignment",
+        "line": 675,
+        "context": "tract_quarter(quarter: str) -> str:\n    token = str(quarter).strip().upper()\n    if not"
+      },
+      {
+        "category": "token_assignment",
+        "line": 676,
+        "context": "str(quarter).strip().upper()\n    if not token:\n        return token\n    return token i"
+      },
+      {
+        "category": "token_assignment",
+        "line": 682,
+        "context": "y(quarter: str) -> tuple[int, int]:\n    token = _normalise_contract_quarter(quarter)\n  "
+      }
+    ]
+  },
+  {
+    "path": "scripts/source_dispatch_unit_scada.py",
+    "matches": []
+  },
+  {
+    "path": "scripts/source_dispatchconstraint.py",
+    "matches": []
+  },
+  {
+    "path": "scripts/source_dispatchinterconnectorres.py",
+    "matches": []
+  },
+  {
+    "path": "scripts/source_dispatchregionsum.py",
+    "matches": []
+  },
+  {
+    "path": "src/transmission_rights/services/aemo/market_state_database.py",
+    "matches": []
+  }
+]
