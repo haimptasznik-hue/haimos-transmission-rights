@@ -1,0 +1,131 @@
+{
+  "milestone": "historical-feature-store-v1.0",
+  "validated_at_utc": "2026-07-27T00:00:00Z",
+  "historical_period": {
+    "start_date": "2020-01-01",
+    "end_date": "2026-07-27"
+  },
+  "summary": {
+    "months_processed": 79,
+    "rows_produced": 691106,
+    "interval_coverage_pct": 100.0,
+    "duplicate_interval_keys": 0,
+    "mean_quality_score": 79.4482,
+    "quality_finite_count": 307296,
+    "quality_nan_count": 383810,
+    "quality_inf_count": 0,
+    "available_source_lineage_complete": true
+  },
+  "artifacts": [
+    {
+      "path": "data/derived/historical_feature_store/historical_market_feature_store_5min.csv.gz",
+      "size_bytes": 11989403,
+      "sha256": "3d331a002edd78cb33cb2da6faaedea17d6cdf99ca0bb8b844dc1be61dd45810",
+      "row_count": 691106,
+      "date_range": "2020-01-01..2026-07-27",
+      "schema_version": "5bd6bd9423870ac8",
+      "generation_command": "python scripts/historical_build_manager.py start --start-date 2020-01-01 --output-dir data/derived/historical_feature_store",
+      "required_for_exact_reproduction": true,
+      "stored_locally_only": true
+    },
+    {
+      "path": "data/derived/historical_feature_store/historical_dataset_status.csv",
+      "size_bytes": 61178,
+      "sha256": "22bd0c4beb292e70f7f4e3760f62a7d73c11b58787a51b9fc40800375e6eb7d7",
+      "row_count": 790,
+      "date_range": "2020-01-01..2026-07-27",
+      "schema_version": "n/a",
+      "generation_command": "python scripts/historical_build_manager.py start --start-date 2020-01-01 --output-dir data/derived/historical_feature_store",
+      "required_for_exact_reproduction": true,
+      "stored_locally_only": true
+    },
+    {
+      "path": "data/derived/historical_feature_store/historical_intervention_audit.csv",
+      "size_bytes": 8908758,
+      "sha256": "93400e47a2283ee0e33656620ecac3f3e6b6d151f5acf5d01c1f949ac84c330c",
+      "row_count": 212544,
+      "date_range": "2020-01-01..2026-07-27",
+      "schema_version": "INTERVENTION_AUDIT_COLUMNS",
+      "generation_command": "python scripts/historical_build_manager.py start --start-date 2020-01-01 --output-dir data/derived/historical_feature_store",
+      "required_for_exact_reproduction": true,
+      "stored_locally_only": true
+    },
+    {
+      "path": "data/derived/historical_feature_store/checkpoints",
+      "size_bytes": 72886710,
+      "sha256": "18d494a35cc1fe7ce36e8face6d5c775146be4a3ee2a41ec94d58b1973b66591",
+      "row_count": 691106,
+      "date_range": "2020-01-01..2026-07-27",
+      "schema_version": "monthly checkpoint schema",
+      "generation_command": "python scripts/historical_build_manager.py start --start-date 2020-01-01 --output-dir data/derived/historical_feature_store",
+      "required_for_exact_reproduction": true,
+      "stored_locally_only": true
+    },
+    {
+      "path": "MONTHLY_BUILD_STATUS.csv",
+      "size_bytes": 10178,
+      "sha256": "503f8999e77902231b206caa84625853cbf4e06d80a0975df711203755c516d3",
+      "row_count": 79,
+      "date_range": "2020-01-01..2026-07-27",
+      "schema_version": "report schema",
+      "generation_command": "python scripts/build_historical_feature_store.py --start-date 2020-01-01 --output-dir data/derived/historical_feature_store --resume",
+      "required_for_exact_reproduction": true,
+      "stored_locally_only": false
+    },
+    {
+      "path": "MONTHLY_DATASET_COVERAGE.csv",
+      "size_bytes": 54684,
+      "sha256": "a3365334cb9bb58e34f9127eda8aba11f248f90ce8dcbe073a4f52aa57235f0e",
+      "row_count": 790,
+      "date_range": "2020-01-01..2026-07-27",
+      "schema_version": "report schema",
+      "generation_command": "python scripts/build_historical_feature_store.py --start-date 2020-01-01 --output-dir data/derived/historical_feature_store --resume",
+      "required_for_exact_reproduction": true,
+      "stored_locally_only": false
+    },
+    {
+      "path": "MONTHLY_QUALITY_REPORT.csv",
+      "size_bytes": 4666,
+      "sha256": "c4549fd6cba471ef3e4faf2d4879a331b3ec6e63ecbe028b83fa6d4bacf0cec4",
+      "row_count": 79,
+      "date_range": "2020-01-01..2026-07-27",
+      "schema_version": "report schema",
+      "generation_command": "python scripts/build_historical_feature_store.py --start-date 2020-01-01 --output-dir data/derived/historical_feature_store --resume",
+      "required_for_exact_reproduction": true,
+      "stored_locally_only": false
+    },
+    {
+      "path": "MONTHLY_LINEAGE_REPORT.csv",
+      "size_bytes": 38494,
+      "sha256": "9187cfe7fdf087961d5ccb06232e079177eb481201287a1527ab2a74bde1b366",
+      "row_count": 790,
+      "date_range": "2020-01-01..2026-07-27",
+      "schema_version": "report schema",
+      "generation_command": "python scripts/build_historical_feature_store.py --start-date 2020-01-01 --output-dir data/derived/historical_feature_store --resume",
+      "required_for_exact_reproduction": true,
+      "stored_locally_only": false
+    },
+    {
+      "path": "MONTHLY_SCHEMA_REPORT.csv",
+      "size_bytes": 32191,
+      "sha256": "6bbed9847563ebd19e3750a0c75c47e4719120543d0cee81e18682212548f991",
+      "row_count": 79,
+      "date_range": "2020-01-01..2026-07-27",
+      "schema_version": "report schema",
+      "generation_command": "python scripts/build_historical_feature_store.py --start-date 2020-01-01 --output-dir data/derived/historical_feature_store --resume",
+      "required_for_exact_reproduction": true,
+      "stored_locally_only": false
+    },
+    {
+      "path": "MONTHLY_BUILD_CHECKPOINTS.csv",
+      "size_bytes": 36317,
+      "sha256": "8828d3e955bf3e6c90e45efcab0233219a96bbc31a2a34b18f692bf278599524",
+      "row_count": 79,
+      "date_range": "2020-01-01..2026-07-27",
+      "schema_version": "report schema",
+      "generation_command": "python scripts/build_historical_feature_store.py --start-date 2020-01-01 --output-dir data/derived/historical_feature_store --resume",
+      "required_for_exact_reproduction": true,
+      "stored_locally_only": false
+    }
+  ]
+}

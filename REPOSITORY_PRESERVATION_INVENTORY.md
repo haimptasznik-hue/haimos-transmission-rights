@@ -313,3 +313,21 @@
 
 ## Manual Review Required
 - None auto-flagged by current rules.
+
+## Historical Feature Store v1.0 Local Bulk Artifact Manifest
+
+Generation command baseline:
+- `python scripts/historical_build_manager.py start --start-date 2020-01-01 --output-dir data/derived/historical_feature_store`
+
+| Path | Size (bytes) | SHA-256 | Row Count | Date Range | Schema Version | Required for Exact Reproduction | Stored Locally Only |
+|---|---:|---|---:|---|---|---|---|
+| `data/derived/historical_feature_store/historical_market_feature_store_5min.csv.gz` | 11,989,403 | `3d331a002edd78cb33cb2da6faaedea17d6cdf99ca0bb8b844dc1be61dd45810` | 691,106 | `2020-01-01..2026-07-27` | `5bd6bd9423870ac8` | Yes | Yes |
+| `data/derived/historical_feature_store/historical_dataset_status.csv` | 61,178 | `22bd0c4beb292e70f7f4e3760f62a7d73c11b58787a51b9fc40800375e6eb7d7` | 790 | `2020-01-01..2026-07-27` | `n/a` | Yes | Yes |
+| `data/derived/historical_feature_store/historical_intervention_audit.csv` | 8,908,758 | `93400e47a2283ee0e33656620ecac3f3e6b6d151f5acf5d01c1f949ac84c330c` | 212,544 | `2020-01-01..2026-07-27` | `INTERVENTION_AUDIT_COLUMNS` | Yes | Yes |
+| `data/derived/historical_feature_store/checkpoints` | 72,886,710 | `18d494a35cc1fe7ce36e8face6d5c775146be4a3ee2a41ec94d58b1973b66591` | 691,106 | `2020-01-01..2026-07-27` | `monthly checkpoint schema` | Yes | Yes |
+| `MONTHLY_BUILD_STATUS.csv` | 10,178 | `503f8999e77902231b206caa84625853cbf4e06d80a0975df711203755c516d3` | 79 | `2020-01-01..2026-07-27` | `report schema` | Yes | No |
+| `MONTHLY_DATASET_COVERAGE.csv` | 54,684 | `a3365334cb9bb58e34f9127eda8aba11f248f90ce8dcbe073a4f52aa57235f0e` | 790 | `2020-01-01..2026-07-27` | `report schema` | Yes | No |
+| `MONTHLY_QUALITY_REPORT.csv` | 4,666 | `c4549fd6cba471ef3e4faf2d4879a331b3ec6e63ecbe028b83fa6d4bacf0cec4` | 79 | `2020-01-01..2026-07-27` | `report schema` | Yes | No |
+| `MONTHLY_LINEAGE_REPORT.csv` | 38,494 | `9187cfe7fdf087961d5ccb06232e079177eb481201287a1527ab2a74bde1b366` | 790 | `2020-01-01..2026-07-27` | `report schema` | Yes | No |
+| `MONTHLY_SCHEMA_REPORT.csv` | 32,191 | `6bbed9847563ebd19e3750a0c75c47e4719120543d0cee81e18682212548f991` | 79 | `2020-01-01..2026-07-27` | `report schema` | Yes | No |
+| `MONTHLY_BUILD_CHECKPOINTS.csv` | 36,317 | `8828d3e955bf3e6c90e45efcab0233219a96bbc31a2a34b18f692bf278599524` | 79 | `2020-01-01..2026-07-27` | `report schema` | Yes | No |
