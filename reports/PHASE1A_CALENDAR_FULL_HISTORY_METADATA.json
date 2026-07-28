@@ -1,0 +1,32 @@
+{
+  "months_enriched": 79,
+  "rows_enriched": 11199090,
+  "historical_start": "2020-01",
+  "historical_end": "2026-07",
+  "duplicate_canonical_keys_total": 0,
+  "row_count_preservation_all_months": true,
+  "base_column_preservation_all_months": true,
+  "base_value_mutations_total": 0,
+  "state_holiday_validation_all_months": true,
+  "dst_validation_all_months": true,
+  "cross_state_contamination_count_total": 0,
+  "lineage_completeness_pct": 100.0,
+  "regional_calendar_coverage_pct": 100.0,
+  "quality_validation_pass_all_months": true,
+  "checkpoint_reuse_months": 32,
+  "checkpoint_reuse_result": {
+    "reused_months": 32,
+    "newly_processed_months": 47,
+    "resume_supported": true
+  },
+  "disk_usage_bytes_output_store": 271167391,
+  "runtime_seconds_total": 1577.466686964035,
+  "runtime_seconds_avg_per_month": 19.96793274638019,
+  "all_completion_markers_present": true,
+  "tests_passed_failed": {
+    "passed_months": 79,
+    "failed_months": 0
+  },
+  "generated_at_utc": "2026-07-28T13:24:35.522285+00:00",
+  "output_root": "/Users/haimptasznik/Desktop/haimos-transmission-rights-repo/data/derived/historical_feature_store_calendar_v2_regional"
+}

@@ -1,0 +1,683 @@
+{
+  "canonical_key_forensic": [
+    {
+      "month": "2020-01",
+      "column_name": "observation_timestamp_utc",
+      "dtype_before": "str",
+      "dtype_after": "datetime64[us, UTC]",
+      "timezone_before": "naive-or-non-datetime",
+      "timezone_after": "UTC",
+      "null_count_before": 0,
+      "null_count_after": 0,
+      "value_hash_before": "8b54fc65133958487f1bb9be5302e234eed46e71028fbac61be04efb7998d1f2",
+      "value_hash_after": "667b0f25efc8b90a1f3c0d61f2d2ade9a4bf66d19cb6396cad4dd1d6ae8f1102",
+      "row_order_before": "range_index_0_to_n-1",
+      "row_order_after": "range_index_0_to_n-1",
+      "exact_equality_result": false,
+      "semantic_datetime_equality": true,
+      "first_differing_row": {
+        "row": 0,
+        "before": "2019-12-31T14:00:00Z",
+        "after": "2019-12-31 14:00:00+00:00"
+      },
+      "likely_cause": "representational_dtype_change"
+    },
+    {
+      "month": "2020-01",
+      "column_name": "interval_timestamp_utc",
+      "dtype_before": "str",
+      "dtype_after": "str",
+      "timezone_before": "naive-or-non-datetime",
+      "timezone_after": "naive-or-non-datetime",
+      "null_count_before": 0,
+      "null_count_after": 0,
+      "value_hash_before": "8b54fc65133958487f1bb9be5302e234eed46e71028fbac61be04efb7998d1f2",
+      "value_hash_after": "8b54fc65133958487f1bb9be5302e234eed46e71028fbac61be04efb7998d1f2",
+      "row_order_before": "range_index_0_to_n-1",
+      "row_order_after": "range_index_0_to_n-1",
+      "exact_equality_result": true,
+      "semantic_datetime_equality": false,
+      "first_differing_row": null,
+      "likely_cause": "actual_mutation_or_other"
+    },
+    {
+      "month": "2020-02",
+      "column_name": "observation_timestamp_utc",
+      "dtype_before": "str",
+      "dtype_after": "datetime64[us, UTC]",
+      "timezone_before": "naive-or-non-datetime",
+      "timezone_after": "UTC",
+      "null_count_before": 0,
+      "null_count_after": 0,
+      "value_hash_before": "fb23b5f517c1f365aff411cdc09f49a34963cabd2edf81574b347a4dca0ef4a4",
+      "value_hash_after": "dafdf699de075e3e3e555c51701102a26468204a0ff6dcfff7ebbff93b0f7ed1",
+      "row_order_before": "range_index_0_to_n-1",
+      "row_order_after": "range_index_0_to_n-1",
+      "exact_equality_result": false,
+      "semantic_datetime_equality": true,
+      "first_differing_row": {
+        "row": 0,
+        "before": "2020-01-31T14:00:00Z",
+        "after": "2020-01-31 14:00:00+00:00"
+      },
+      "likely_cause": "representational_dtype_change"
+    },
+    {
+      "month": "2020-02",
+      "column_name": "interval_timestamp_utc",
+      "dtype_before": "str",
+      "dtype_after": "str",
+      "timezone_before": "naive-or-non-datetime",
+      "timezone_after": "naive-or-non-datetime",
+      "null_count_before": 0,
+      "null_count_after": 0,
+      "value_hash_before": "fb23b5f517c1f365aff411cdc09f49a34963cabd2edf81574b347a4dca0ef4a4",
+      "value_hash_after": "fb23b5f517c1f365aff411cdc09f49a34963cabd2edf81574b347a4dca0ef4a4",
+      "row_order_before": "range_index_0_to_n-1",
+      "row_order_after": "range_index_0_to_n-1",
+      "exact_equality_result": true,
+      "semantic_datetime_equality": false,
+      "first_differing_row": null,
+      "likely_cause": "actual_mutation_or_other"
+    },
+    {
+      "month": "2020-03",
+      "column_name": "observation_timestamp_utc",
+      "dtype_before": "str",
+      "dtype_after": "datetime64[us, UTC]",
+      "timezone_before": "naive-or-non-datetime",
+      "timezone_after": "UTC",
+      "null_count_before": 0,
+      "null_count_after": 0,
+      "value_hash_before": "87a1dcda3f49b7490204b3de909fa0cabaf6548ccec44dbb1eb75654f7cfe488",
+      "value_hash_after": "eaea4449c1c5da57094341bfd4d2ce5900dd8668cb2a9d7b1e2c433f40001964",
+      "row_order_before": "range_index_0_to_n-1",
+      "row_order_after": "range_index_0_to_n-1",
+      "exact_equality_result": false,
+      "semantic_datetime_equality": true,
+      "first_differing_row": {
+        "row": 0,
+        "before": "2020-02-29T14:00:00Z",
+        "after": "2020-02-29 14:00:00+00:00"
+      },
+      "likely_cause": "representational_dtype_change"
+    },
+    {
+      "month": "2020-03",
+      "column_name": "interval_timestamp_utc",
+      "dtype_before": "str",
+      "dtype_after": "str",
+      "timezone_before": "naive-or-non-datetime",
+      "timezone_after": "naive-or-non-datetime",
+      "null_count_before": 0,
+      "null_count_after": 0,
+      "value_hash_before": "87a1dcda3f49b7490204b3de909fa0cabaf6548ccec44dbb1eb75654f7cfe488",
+      "value_hash_after": "87a1dcda3f49b7490204b3de909fa0cabaf6548ccec44dbb1eb75654f7cfe488",
+      "row_order_before": "range_index_0_to_n-1",
+      "row_order_after": "range_index_0_to_n-1",
+      "exact_equality_result": true,
+      "semantic_datetime_equality": false,
+      "first_differing_row": null,
+      "likely_cause": "actual_mutation_or_other"
+    }
+  ],
+  "base_column_forensic": [
+    {
+      "column": "interval_timestamp_utc",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "dispatchprice_nsw_rrp",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "dispatchprice_qld_rrp",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "dispatchprice_sa_rrp",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "dispatchprice_tas_rrp",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "dispatchprice_vic_rrp",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "dispatchprice_price_spread_max_min",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "dispatchconstraint_constraint_count",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "dispatchconstraint_max_marginal_value",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "dispatchconstraint_mean_marginal_value",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "dispatchconstraint_violation_count",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "dispatchconstraint_max_violation_degree",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "dispatchconstraint_binding_flag",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "observation_timestamp_utc",
+      "values_identical": false,
+      "dtype_identical": false,
+      "null_mask_identical": true,
+      "hash_identical": false,
+      "first_difference": "2020-01 row 0: 2019-12-31T14:00:00Z -> 2019-12-31 14:00:00+00:00",
+      "classification": "VALIDATOR_DEFECT",
+      "recommended_validator_rule": "normalize_to_utc_instant_before_compare"
+    },
+    {
+      "column": "effective_timestamp_utc",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "publication_timestamp_utc",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "source",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "point_in_time_available",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "quality_score",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    },
+    {
+      "column": "lineage_hash",
+      "values_identical": true,
+      "dtype_identical": true,
+      "null_mask_identical": true,
+      "hash_identical": true,
+      "first_difference": "",
+      "classification": "NO_ISSUE",
+      "recommended_validator_rule": "keep_strict_equals"
+    }
+  ],
+  "holiday_cases": [
+    {
+      "test_case": "SA Labour Day check in labour_oct fixture",
+      "fixture_local_date": "2020-10-05",
+      "fixture_timezone": "Australia/Sydney",
+      "utc_timestamp_sample": "2020-10-05 01:00:00+00:00",
+      "source_region": "sa",
+      "expected_result": "all SA intervals flagged true",
+      "actual_result_summary": {
+        "nsw": {
+          "local_timestamp": "2020-10-05 12:00:00+11:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 1,
+          "holiday_name": "Labour Day",
+          "holiday_jurisdiction_source": "NSW1 map"
+        },
+        "qld": {
+          "local_timestamp": "2020-10-05 11:00:00+10:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 1,
+          "holiday_name": "Queen's Birthday",
+          "holiday_jurisdiction_source": "QLD1 map"
+        },
+        "vic": {
+          "local_timestamp": "2020-10-05 12:00:00+11:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 0,
+          "holiday_name": "",
+          "holiday_jurisdiction_source": "VIC1 map"
+        },
+        "sa": {
+          "local_timestamp": "2020-10-05 11:30:00+10:30",
+          "local_date": "2020-10-05",
+          "holiday_flag": 1,
+          "holiday_name": "Labour Day",
+          "holiday_jurisdiction_source": "SA1 map"
+        },
+        "tas": {
+          "local_timestamp": "2020-10-05 12:00:00+11:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 0,
+          "holiday_name": "",
+          "holiday_jurisdiction_source": "TAS1 map"
+        }
+      }
+    },
+    {
+      "test_case": "QLD not labour_oct expectation",
+      "fixture_local_date": "2020-10-05",
+      "fixture_timezone": "Australia/Sydney",
+      "utc_timestamp_sample": "2020-10-05 01:00:00+00:00",
+      "source_region": "qld",
+      "expected_result": "all QLD intervals flagged false",
+      "actual_result_summary": {
+        "nsw": {
+          "local_timestamp": "2020-10-05 12:00:00+11:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 1,
+          "holiday_name": "Labour Day",
+          "holiday_jurisdiction_source": "NSW1 map"
+        },
+        "qld": {
+          "local_timestamp": "2020-10-05 11:00:00+10:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 1,
+          "holiday_name": "Queen's Birthday",
+          "holiday_jurisdiction_source": "QLD1 map"
+        },
+        "vic": {
+          "local_timestamp": "2020-10-05 12:00:00+11:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 0,
+          "holiday_name": "",
+          "holiday_jurisdiction_source": "VIC1 map"
+        },
+        "sa": {
+          "local_timestamp": "2020-10-05 11:30:00+10:30",
+          "local_date": "2020-10-05",
+          "holiday_flag": 1,
+          "holiday_name": "Labour Day",
+          "holiday_jurisdiction_source": "SA1 map"
+        },
+        "tas": {
+          "local_timestamp": "2020-10-05 12:00:00+11:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 0,
+          "holiday_name": "",
+          "holiday_jurisdiction_source": "TAS1 map"
+        }
+      }
+    },
+    {
+      "test_case": "NSW not qld_oct expectation",
+      "fixture_local_date": "2020-10-05",
+      "fixture_timezone": "Australia/Brisbane",
+      "utc_timestamp_sample": "2020-10-05 02:00:00+00:00",
+      "source_region": "nsw",
+      "expected_result": "all NSW intervals flagged false",
+      "actual_result_summary": {
+        "nsw": {
+          "local_timestamp": "2020-10-05 13:00:00+11:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 1,
+          "holiday_name": "Labour Day",
+          "holiday_jurisdiction_source": "NSW1 map"
+        },
+        "qld": {
+          "local_timestamp": "2020-10-05 12:00:00+10:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 1,
+          "holiday_name": "Queen's Birthday",
+          "holiday_jurisdiction_source": "QLD1 map"
+        },
+        "vic": {
+          "local_timestamp": "2020-10-05 13:00:00+11:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 0,
+          "holiday_name": "",
+          "holiday_jurisdiction_source": "VIC1 map"
+        },
+        "sa": {
+          "local_timestamp": "2020-10-05 12:30:00+10:30",
+          "local_date": "2020-10-05",
+          "holiday_flag": 1,
+          "holiday_name": "Labour Day",
+          "holiday_jurisdiction_source": "SA1 map"
+        },
+        "tas": {
+          "local_timestamp": "2020-10-05 13:00:00+11:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 0,
+          "holiday_name": "",
+          "holiday_jurisdiction_source": "TAS1 map"
+        }
+      }
+    },
+    {
+      "test_case": "QLD-only contamination case",
+      "fixture_local_date": "2020-10-05",
+      "fixture_timezone": "Australia/Brisbane",
+      "utc_timestamp_sample": "2020-10-05 02:00:00+00:00",
+      "source_region": "qld",
+      "expected_result": "other regions zero flags",
+      "actual_result_summary": {
+        "nsw": {
+          "local_timestamp": "2020-10-05 13:00:00+11:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 1,
+          "holiday_name": "Labour Day",
+          "holiday_jurisdiction_source": "NSW1 map"
+        },
+        "qld": {
+          "local_timestamp": "2020-10-05 12:00:00+10:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 1,
+          "holiday_name": "Queen's Birthday",
+          "holiday_jurisdiction_source": "QLD1 map"
+        },
+        "vic": {
+          "local_timestamp": "2020-10-05 13:00:00+11:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 0,
+          "holiday_name": "",
+          "holiday_jurisdiction_source": "VIC1 map"
+        },
+        "sa": {
+          "local_timestamp": "2020-10-05 12:30:00+10:30",
+          "local_date": "2020-10-05",
+          "holiday_flag": 1,
+          "holiday_name": "Labour Day",
+          "holiday_jurisdiction_source": "SA1 map"
+        },
+        "tas": {
+          "local_timestamp": "2020-10-05 13:00:00+11:00",
+          "local_date": "2020-10-05",
+          "holiday_flag": 0,
+          "holiday_name": "",
+          "holiday_jurisdiction_source": "TAS1 map"
+        }
+      }
+    },
+    {
+      "test_case": "SA-only contamination case",
+      "fixture_local_date": "2020-03-09",
+      "fixture_timezone": "Australia/Adelaide",
+      "utc_timestamp_sample": "2020-03-09 01:30:00+00:00",
+      "source_region": "sa",
+      "expected_result": "other regions zero flags",
+      "actual_result_summary": {
+        "nsw": {
+          "local_timestamp": "2020-03-09 12:30:00+11:00",
+          "local_date": "2020-03-09",
+          "holiday_flag": 0,
+          "holiday_name": "",
+          "holiday_jurisdiction_source": "NSW1 map"
+        },
+        "qld": {
+          "local_timestamp": "2020-03-09 11:30:00+10:00",
+          "local_date": "2020-03-09",
+          "holiday_flag": 0,
+          "holiday_name": "",
+          "holiday_jurisdiction_source": "QLD1 map"
+        },
+        "vic": {
+          "local_timestamp": "2020-03-09 12:30:00+11:00",
+          "local_date": "2020-03-09",
+          "holiday_flag": 1,
+          "holiday_name": "Labour Day",
+          "holiday_jurisdiction_source": "VIC1 map"
+        },
+        "sa": {
+          "local_timestamp": "2020-03-09 12:00:00+10:30",
+          "local_date": "2020-03-09",
+          "holiday_flag": 1,
+          "holiday_name": "Adelaide Cup Day",
+          "holiday_jurisdiction_source": "SA1 map"
+        },
+        "tas": {
+          "local_timestamp": "2020-03-09 12:30:00+11:00",
+          "local_date": "2020-03-09",
+          "holiday_flag": 1,
+          "holiday_name": "Eight Hours Day",
+          "holiday_jurisdiction_source": "TAS1 map"
+        }
+      }
+    }
+  ],
+  "contamination_cases": [
+    {
+      "test_case_name": "nsw_only",
+      "source_region": "nsw",
+      "comparison_regions": "qld,vic,sa,tas",
+      "expected_flag": "0 in all comparison regions",
+      "actual_flag_counts": {
+        "qld": 0,
+        "vic": 0,
+        "sa": 0,
+        "tas": 0
+      },
+      "failure": false,
+      "reason": "no contamination"
+    },
+    {
+      "test_case_name": "vic_only",
+      "source_region": "vic",
+      "comparison_regions": "nsw,qld,sa,tas",
+      "expected_flag": "0 in all comparison regions",
+      "actual_flag_counts": {
+        "nsw": 0,
+        "qld": 0,
+        "sa": 0,
+        "tas": 0
+      },
+      "failure": false,
+      "reason": "no contamination"
+    },
+    {
+      "test_case_name": "qld_only",
+      "source_region": "qld",
+      "comparison_regions": "nsw,vic,sa,tas",
+      "expected_flag": "0 in all comparison regions",
+      "actual_flag_counts": {
+        "nsw": 276,
+        "vic": 0,
+        "sa": 282,
+        "tas": 0
+      },
+      "failure": true,
+      "reason": "test date coincides with legitimate non-national holiday(s) in other state(s)"
+    },
+    {
+      "test_case_name": "sa_only",
+      "source_region": "sa",
+      "comparison_regions": "nsw,qld,vic,tas",
+      "expected_flag": "0 in all comparison regions",
+      "actual_flag_counts": {
+        "nsw": 0,
+        "qld": 0,
+        "vic": 282,
+        "tas": 282
+      },
+      "failure": true,
+      "reason": "test date coincides with legitimate non-national holiday(s) in other state(s)"
+    },
+    {
+      "test_case_name": "tas_only",
+      "source_region": "tas",
+      "comparison_regions": "nsw,qld,vic,sa",
+      "expected_flag": "0 in all comparison regions",
+      "actual_flag_counts": {
+        "nsw": 0,
+        "qld": 0,
+        "vic": 0,
+        "sa": 0
+      },
+      "failure": false,
+      "reason": "no contamination"
+    }
+  ],
+  "failure_classification": [
+    {
+      "failure_id": "F1",
+      "gate": "Canonical interval keys unchanged",
+      "expected": "True for Jan/Feb/Mar",
+      "actual": "False due to representation mismatch in timestamp key columns while semantic UTC instants remain equal",
+      "evidence": "observation_timestamp_utc dtype object->datetime64[ns, UTC], semantic_datetime_equality=True in all months; row order unchanged; first diff is string-vs-timestamp representation",
+      "root_cause": "Validator uses strict DataFrame.equals on mixed representations instead of semantic UTC instant comparison for key columns.",
+      "classification": "VALIDATOR_DEFECT",
+      "production_code_change_required": "No",
+      "validator_change_required": "Yes",
+      "test_data_change_required": "No",
+      "minimum_fix": "Normalize canonical key columns to UTC datetime (or canonical string format) before equality/hash checks.",
+      "risk_if_left_unresolved": "False FAIL blocks integration despite no semantic key mutation."
+    },
+    {
+      "failure_id": "F2",
+      "gate": "Base Historical Feature Store v1.0 columns unchanged",
+      "expected": "True for all base columns Jan/Feb/Mar",
+      "actual": "False driven by representational change in timestamp base columns, not semantic value drift; non-timestamp base columns match.",
+      "evidence": "For timestamp base columns, dtype and string hash differ but semantic UTC equality holds; null masks/order unchanged.",
+      "root_cause": "Validator preservation rule conflates representational dtype conversion with semantic mutation.",
+      "classification": "VALIDATOR_DEFECT",
+      "production_code_change_required": "No",
+      "validator_change_required": "Yes",
+      "test_data_change_required": "No",
+      "minimum_fix": "Apply semantic-preservation checks for datetime base columns (UTC-normalized) and strict checks for non-datetime columns.",
+      "risk_if_left_unresolved": "Persistent false negatives on base-column gate."
+    },
+    {
+      "failure_id": "F3",
+      "gate": "Specific holiday test cases",
+      "expected": "State-specific expectations align with official per-state holiday dates and local-date windows.",
+      "actual": "Failures occur where fixture dates are not state-unique or are generated from another state timezone day-window.",
+      "evidence": "2020-10-05 is QLD Queen's Birthday and NSW/SA Labour Day; fixture built in Sydney timezone causes mixed local dates for SA/QLD across 288 intervals; NSW-not-QLD expectation invalid because NSW has Labour Day same date.",
+      "root_cause": "Test fixtures/expectations use incorrect assumptions (date uniqueness and single-timezone day slicing).",
+      "classification": "TEST_DATA_DEFECT",
+      "production_code_change_required": "No",
+      "validator_change_required": "Yes",
+      "test_data_change_required": "Yes",
+      "minimum_fix": "Use region-local day windows per asserted region and choose truly exclusive dates for state-specific assertions.",
+      "risk_if_left_unresolved": "Holiday gate remains noisy and can flag correct mappings as failures."
+    },
+    {
+      "failure_id": "F4",
+      "gate": "Cross-state contamination check",
+      "expected": "Only genuinely region-exclusive holidays should assert zero flags in other regions.",
+      "actual": "Contamination flagged for qld_only (2020-10-05) and sa_only (2020-03-09) where other states legitimately observe different holidays on same date.",
+      "evidence": "qld_only date overlaps NSW/SA Labour Day; sa_only date overlaps VIC Labour Day and TAS Eight Hours Day.",
+      "root_cause": "Contamination test data picks non-exclusive dates and interprets valid multi-state coincidences as contamination.",
+      "classification": "TEST_DATA_DEFECT",
+      "production_code_change_required": "No",
+      "validator_change_required": "Yes",
+      "test_data_change_required": "Yes",
+      "minimum_fix": "Redefine contamination cases to use dates exclusive to a single state holiday map.",
+      "risk_if_left_unresolved": "False contamination failures despite jurisdiction-correct holiday assignment."
+    }
+  ]
+}

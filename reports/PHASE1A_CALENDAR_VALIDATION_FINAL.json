@@ -1,0 +1,935 @@
+{
+  "final_gate_status": "PASS",
+  "failure_count": 0,
+  "readiness_for_full_79_month_integration": true,
+  "failures": [],
+  "confirmed_table_grain": "one row per 5-minute interval; regional market fields in the same row",
+  "regional_columns_added": [
+    "nsw_local_timestamp",
+    "nsw_local_date",
+    "nsw_local_hour",
+    "nsw_local_day_of_week",
+    "nsw_weekend_flag",
+    "nsw_business_day_flag",
+    "nsw_public_holiday_flag",
+    "nsw_public_holiday_name",
+    "nsw_pre_holiday_flag",
+    "nsw_post_holiday_flag",
+    "nsw_bridge_day_flag",
+    "nsw_daylight_saving_flag",
+    "nsw_daylight_saving_transition_flag",
+    "nsw_Easter_period_flag",
+    "nsw_Christmas_New_Year_period_flag",
+    "nsw_working_day_count_in_month",
+    "qld_local_timestamp",
+    "qld_local_date",
+    "qld_local_hour",
+    "qld_local_day_of_week",
+    "qld_weekend_flag",
+    "qld_business_day_flag",
+    "qld_public_holiday_flag",
+    "qld_public_holiday_name",
+    "qld_pre_holiday_flag",
+    "qld_post_holiday_flag",
+    "qld_bridge_day_flag",
+    "qld_daylight_saving_flag",
+    "qld_daylight_saving_transition_flag",
+    "qld_Easter_period_flag",
+    "qld_Christmas_New_Year_period_flag",
+    "qld_working_day_count_in_month",
+    "vic_local_timestamp",
+    "vic_local_date",
+    "vic_local_hour",
+    "vic_local_day_of_week",
+    "vic_weekend_flag",
+    "vic_business_day_flag",
+    "vic_public_holiday_flag",
+    "vic_public_holiday_name",
+    "vic_pre_holiday_flag",
+    "vic_post_holiday_flag",
+    "vic_bridge_day_flag",
+    "vic_daylight_saving_flag",
+    "vic_daylight_saving_transition_flag",
+    "vic_Easter_period_flag",
+    "vic_Christmas_New_Year_period_flag",
+    "vic_working_day_count_in_month",
+    "sa_local_timestamp",
+    "sa_local_date",
+    "sa_local_hour",
+    "sa_local_day_of_week",
+    "sa_weekend_flag",
+    "sa_business_day_flag",
+    "sa_public_holiday_flag",
+    "sa_public_holiday_name",
+    "sa_pre_holiday_flag",
+    "sa_post_holiday_flag",
+    "sa_bridge_day_flag",
+    "sa_daylight_saving_flag",
+    "sa_daylight_saving_transition_flag",
+    "sa_Easter_period_flag",
+    "sa_Christmas_New_Year_period_flag",
+    "sa_working_day_count_in_month",
+    "tas_local_timestamp",
+    "tas_local_date",
+    "tas_local_hour",
+    "tas_local_day_of_week",
+    "tas_weekend_flag",
+    "tas_business_day_flag",
+    "tas_public_holiday_flag",
+    "tas_public_holiday_name",
+    "tas_pre_holiday_flag",
+    "tas_post_holiday_flag",
+    "tas_bridge_day_flag",
+    "tas_daylight_saving_flag",
+    "tas_daylight_saving_transition_flag",
+    "tas_Easter_period_flag",
+    "tas_Christmas_New_Year_period_flag",
+    "tas_working_day_count_in_month"
+  ],
+  "canonical_key_fix_result": {
+    "semantic_equality_all_months": true,
+    "hash_equality_all_months": true,
+    "details": [
+      {
+        "month": "2020-01",
+        "column": "observation_timestamp_utc",
+        "normalized_dtype_before": "datetime64[us, UTC]",
+        "normalized_dtype_after": "datetime64[us, UTC]",
+        "semantic_equality_result": true,
+        "hash_equality_result": true,
+        "first_real_difference": null
+      },
+      {
+        "month": "2020-01",
+        "column": "interval_timestamp_utc",
+        "normalized_dtype_before": "datetime64[us, UTC]",
+        "normalized_dtype_after": "datetime64[us, UTC]",
+        "semantic_equality_result": true,
+        "hash_equality_result": true,
+        "first_real_difference": null
+      },
+      {
+        "month": "2020-02",
+        "column": "observation_timestamp_utc",
+        "normalized_dtype_before": "datetime64[us, UTC]",
+        "normalized_dtype_after": "datetime64[us, UTC]",
+        "semantic_equality_result": true,
+        "hash_equality_result": true,
+        "first_real_difference": null
+      },
+      {
+        "month": "2020-02",
+        "column": "interval_timestamp_utc",
+        "normalized_dtype_before": "datetime64[us, UTC]",
+        "normalized_dtype_after": "datetime64[us, UTC]",
+        "semantic_equality_result": true,
+        "hash_equality_result": true,
+        "first_real_difference": null
+      },
+      {
+        "month": "2020-03",
+        "column": "observation_timestamp_utc",
+        "normalized_dtype_before": "datetime64[us, UTC]",
+        "normalized_dtype_after": "datetime64[us, UTC]",
+        "semantic_equality_result": true,
+        "hash_equality_result": true,
+        "first_real_difference": null
+      },
+      {
+        "month": "2020-03",
+        "column": "interval_timestamp_utc",
+        "normalized_dtype_before": "datetime64[us, UTC]",
+        "normalized_dtype_after": "datetime64[us, UTC]",
+        "semantic_equality_result": true,
+        "hash_equality_result": true,
+        "first_real_difference": null
+      }
+    ]
+  },
+  "base_column_fix_result": {
+    "overall_pass": true,
+    "details": [
+      {
+        "column": "interval_timestamp_utc",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "VALIDATOR_DEFECT",
+        "recommended_validator_rule": "semantic_utc_compare_for_datetime_columns"
+      },
+      {
+        "column": "dispatchprice_nsw_rrp",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "dispatchprice_qld_rrp",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "dispatchprice_sa_rrp",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "dispatchprice_tas_rrp",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "dispatchprice_vic_rrp",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "dispatchprice_price_spread_max_min",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "dispatchconstraint_constraint_count",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "dispatchconstraint_max_marginal_value",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "dispatchconstraint_mean_marginal_value",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "dispatchconstraint_violation_count",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "dispatchconstraint_max_violation_degree",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "dispatchconstraint_binding_flag",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "observation_timestamp_utc",
+        "values_identical": true,
+        "dtype_identical": false,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "VALIDATOR_DEFECT",
+        "recommended_validator_rule": "semantic_utc_compare_for_datetime_columns"
+      },
+      {
+        "column": "effective_timestamp_utc",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "VALIDATOR_DEFECT",
+        "recommended_validator_rule": "semantic_utc_compare_for_datetime_columns"
+      },
+      {
+        "column": "publication_timestamp_utc",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "VALIDATOR_DEFECT",
+        "recommended_validator_rule": "semantic_utc_compare_for_datetime_columns"
+      },
+      {
+        "column": "source",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "point_in_time_available",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "quality_score",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      },
+      {
+        "column": "lineage_hash",
+        "values_identical": true,
+        "dtype_identical": true,
+        "null_mask_identical": true,
+        "hash_identical": true,
+        "first_difference": "",
+        "classification": "NO_ISSUE",
+        "recommended_validator_rule": "strict_value_dtype_null_order_compare"
+      }
+    ]
+  },
+  "holiday_fixture_changes": {
+    "all_pass": true,
+    "fixtures": [
+      {
+        "region": "NSW1",
+        "local_date": "2020-08-03",
+        "holiday_name": "Bank Holiday (NSW)",
+        "official_jurisdiction_source": "NSW1 holiday map",
+        "expected_other_region_behavior": "no other region has this holiday name on own local date",
+        "fixture_name": "NSW-exclusive holiday",
+        "fixture_type": "exclusive",
+        "utc_timestamp_sample": "2020-08-03 02:00:00+00:00",
+        "per_region": {
+          "nsw": {
+            "local_date": "2020-08-03",
+            "holiday_flag": 1,
+            "holiday_name": "Bank Holiday (NSW)",
+            "legal_name": "Bank Holiday (NSW)",
+            "legal_flag": 1
+          },
+          "qld": {
+            "local_date": "2020-08-03",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "vic": {
+            "local_date": "2020-08-03",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "sa": {
+            "local_date": "2020-08-03",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "tas": {
+            "local_date": "2020-08-03",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          }
+        }
+      },
+      {
+        "region": "QLD1",
+        "local_date": "2020-05-04",
+        "holiday_name": "Labour Day",
+        "official_jurisdiction_source": "QLD1 holiday map",
+        "expected_other_region_behavior": "no other region has this holiday name on own local date",
+        "fixture_name": "QLD-exclusive holiday",
+        "fixture_type": "exclusive",
+        "utc_timestamp_sample": "2020-05-04 02:00:00+00:00",
+        "per_region": {
+          "nsw": {
+            "local_date": "2020-05-04",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "qld": {
+            "local_date": "2020-05-04",
+            "holiday_flag": 1,
+            "holiday_name": "Labour Day",
+            "legal_name": "Labour Day",
+            "legal_flag": 1
+          },
+          "vic": {
+            "local_date": "2020-05-04",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "sa": {
+            "local_date": "2020-05-04",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "tas": {
+            "local_date": "2020-05-04",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          }
+        }
+      },
+      {
+        "region": "VIC1",
+        "local_date": "2020-11-03",
+        "holiday_name": "Melbourne Cup Day",
+        "official_jurisdiction_source": "VIC1 holiday map",
+        "expected_other_region_behavior": "no other region has this holiday name on own local date",
+        "fixture_name": "VIC-exclusive holiday",
+        "fixture_type": "exclusive",
+        "utc_timestamp_sample": "2020-11-03 01:00:00+00:00",
+        "per_region": {
+          "nsw": {
+            "local_date": "2020-11-03",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "qld": {
+            "local_date": "2020-11-03",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "vic": {
+            "local_date": "2020-11-03",
+            "holiday_flag": 1,
+            "holiday_name": "Melbourne Cup Day",
+            "legal_name": "Melbourne Cup Day",
+            "legal_flag": 1
+          },
+          "sa": {
+            "local_date": "2020-11-03",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "tas": {
+            "local_date": "2020-11-03",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          }
+        }
+      },
+      {
+        "region": "SA1",
+        "local_date": "2020-03-09",
+        "holiday_name": "Adelaide Cup Day",
+        "official_jurisdiction_source": "SA1 holiday map",
+        "expected_other_region_behavior": "no other region has this holiday name on own local date",
+        "fixture_name": "SA-exclusive holiday",
+        "fixture_type": "exclusive-name",
+        "utc_timestamp_sample": "2020-03-09 01:30:00+00:00",
+        "per_region": {
+          "nsw": {
+            "local_date": "2020-03-09",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "qld": {
+            "local_date": "2020-03-09",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "vic": {
+            "local_date": "2020-03-09",
+            "holiday_flag": 1,
+            "holiday_name": "Labour Day",
+            "legal_name": "Labour Day",
+            "legal_flag": 1
+          },
+          "sa": {
+            "local_date": "2020-03-09",
+            "holiday_flag": 1,
+            "holiday_name": "Adelaide Cup Day",
+            "legal_name": "Adelaide Cup Day",
+            "legal_flag": 1
+          },
+          "tas": {
+            "local_date": "2020-03-09",
+            "holiday_flag": 1,
+            "holiday_name": "Eight Hours Day",
+            "legal_name": "Eight Hours Day",
+            "legal_flag": 1
+          }
+        }
+      },
+      {
+        "region": "TAS1",
+        "local_date": "2020-02-10",
+        "holiday_name": "Royal Hobart Regatta",
+        "official_jurisdiction_source": "TAS1 holiday map",
+        "expected_other_region_behavior": "no other region has this holiday name on own local date",
+        "fixture_name": "TAS-exclusive holiday",
+        "fixture_type": "exclusive",
+        "utc_timestamp_sample": "2020-02-10 01:00:00+00:00",
+        "per_region": {
+          "nsw": {
+            "local_date": "2020-02-10",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "qld": {
+            "local_date": "2020-02-10",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "vic": {
+            "local_date": "2020-02-10",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "sa": {
+            "local_date": "2020-02-10",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "tas": {
+            "local_date": "2020-02-10",
+            "holiday_flag": 1,
+            "holiday_name": "Royal Hobart Regatta",
+            "legal_name": "Royal Hobart Regatta",
+            "legal_flag": 1
+          }
+        }
+      },
+      {
+        "region": "NSW1",
+        "local_date": "2020-01-01",
+        "holiday_name": "New Year's Day",
+        "official_jurisdiction_source": "National map",
+        "expected_other_region_behavior": "all regions flagged",
+        "fixture_name": "National holiday",
+        "fixture_type": "national",
+        "utc_timestamp_sample": "2020-01-01 01:00:00+00:00",
+        "per_region": {
+          "nsw": {
+            "local_date": "2020-01-01",
+            "holiday_flag": 1,
+            "holiday_name": "New Year's Day",
+            "legal_name": "New Year's Day",
+            "legal_flag": 1
+          },
+          "qld": {
+            "local_date": "2020-01-01",
+            "holiday_flag": 1,
+            "holiday_name": "New Year's Day",
+            "legal_name": "New Year's Day",
+            "legal_flag": 1
+          },
+          "vic": {
+            "local_date": "2020-01-01",
+            "holiday_flag": 1,
+            "holiday_name": "New Year's Day",
+            "legal_name": "New Year's Day",
+            "legal_flag": 1
+          },
+          "sa": {
+            "local_date": "2020-01-01",
+            "holiday_flag": 1,
+            "holiday_name": "New Year's Day",
+            "legal_name": "New Year's Day",
+            "legal_flag": 1
+          },
+          "tas": {
+            "local_date": "2020-01-01",
+            "holiday_flag": 1,
+            "holiday_name": "New Year's Day",
+            "legal_name": "New Year's Day",
+            "legal_flag": 1
+          }
+        }
+      },
+      {
+        "region": "QLD1",
+        "local_date": "2020-10-05",
+        "holiday_name": "Queen's Birthday",
+        "official_jurisdiction_source": "QLD1 holiday map",
+        "expected_other_region_behavior": "other regions may have different legal holidays",
+        "fixture_name": "Legitimate multi-state holiday",
+        "fixture_type": "shared",
+        "utc_timestamp_sample": "2020-10-05 02:00:00+00:00",
+        "per_region": {
+          "nsw": {
+            "local_date": "2020-10-05",
+            "holiday_flag": 1,
+            "holiday_name": "Labour Day",
+            "legal_name": "Labour Day",
+            "legal_flag": 1
+          },
+          "qld": {
+            "local_date": "2020-10-05",
+            "holiday_flag": 1,
+            "holiday_name": "Queen's Birthday",
+            "legal_name": "Queen's Birthday",
+            "legal_flag": 1
+          },
+          "vic": {
+            "local_date": "2020-10-05",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          },
+          "sa": {
+            "local_date": "2020-10-05",
+            "holiday_flag": 1,
+            "holiday_name": "Labour Day",
+            "legal_name": "Labour Day",
+            "legal_flag": 1
+          },
+          "tas": {
+            "local_date": "2020-10-05",
+            "holiday_flag": 0,
+            "holiday_name": "",
+            "legal_name": "",
+            "legal_flag": 0
+          }
+        }
+      }
+    ]
+  },
+  "contamination_test_changes": {
+    "definition": "Contamination occurs only when holiday flag/name is illegal for that region on its own local date",
+    "result": {
+      "all_pass": true,
+      "violation_count": 0,
+      "violations": []
+    }
+  },
+  "tests_passed_failed": {
+    "row_counts_preserved": true,
+    "duplicate_keys_zero": true,
+    "canonical_keys_semantic": true,
+    "base_columns_unchanged": true,
+    "national_holiday_tests": true,
+    "state_exclusive_holiday_tests": true,
+    "legitimate_shared_holiday_tests": true,
+    "contamination_checks": true,
+    "dst_checks": true,
+    "utc_local_date_boundary": true,
+    "pit_checks": true,
+    "lineage_checks": true
+  },
+  "row_count_preservation": {
+    "2020-01": true,
+    "2020-02": true,
+    "2020-03": true
+  },
+  "duplicate_canonical_keys": {
+    "2020-01": 0,
+    "2020-02": 0,
+    "2020-03": 0
+  },
+  "dst_validation": {
+    "qld_remaining_non_dst": true,
+    "dst_transitions": {
+      "nsw_dst_start_transition_detected": true,
+      "vic_dst_start_transition_detected": true,
+      "sa_dst_start_transition_detected": true,
+      "tas_dst_start_transition_detected": true,
+      "nsw_dst_end_transition_detected": true,
+      "vic_dst_end_transition_detected": true,
+      "sa_dst_end_transition_detected": true,
+      "tas_dst_end_transition_detected": true
+    },
+    "dst_transition_details_by_region": {
+      "nsw": {
+        "start": {
+          "utc_before": "2020-10-03 15:55:00+00:00",
+          "local_before": "2020-10-04 01:55:00+10:00",
+          "utc_offset_before": "+10:00",
+          "dst_flag_before": 0,
+          "utc_after": "2020-10-03 16:05:00+00:00",
+          "local_after": "2020-10-04 03:05:00+11:00",
+          "utc_offset_after": "+11:00",
+          "dst_flag_after": 1,
+          "transition_flag_result": true
+        },
+        "end": {
+          "utc_before": "2020-04-04 15:55:00+00:00",
+          "local_before": "2020-04-05 02:55:00+11:00",
+          "utc_offset_before": "+11:00",
+          "dst_flag_before": 1,
+          "utc_after": "2020-04-04 16:05:00+00:00",
+          "local_after": "2020-04-05 02:05:00+10:00",
+          "utc_offset_after": "+10:00",
+          "dst_flag_after": 0,
+          "transition_flag_result": true
+        }
+      },
+      "vic": {
+        "start": {
+          "utc_before": "2020-10-03 15:55:00+00:00",
+          "local_before": "2020-10-04 01:55:00+10:00",
+          "utc_offset_before": "+10:00",
+          "dst_flag_before": 0,
+          "utc_after": "2020-10-03 16:05:00+00:00",
+          "local_after": "2020-10-04 03:05:00+11:00",
+          "utc_offset_after": "+11:00",
+          "dst_flag_after": 1,
+          "transition_flag_result": true
+        },
+        "end": {
+          "utc_before": "2020-04-04 15:55:00+00:00",
+          "local_before": "2020-04-05 02:55:00+11:00",
+          "utc_offset_before": "+11:00",
+          "dst_flag_before": 1,
+          "utc_after": "2020-04-04 16:05:00+00:00",
+          "local_after": "2020-04-05 02:05:00+10:00",
+          "utc_offset_after": "+10:00",
+          "dst_flag_after": 0,
+          "transition_flag_result": true
+        }
+      },
+      "tas": {
+        "start": {
+          "utc_before": "2020-10-03 15:55:00+00:00",
+          "local_before": "2020-10-04 01:55:00+10:00",
+          "utc_offset_before": "+10:00",
+          "dst_flag_before": 0,
+          "utc_after": "2020-10-03 16:05:00+00:00",
+          "local_after": "2020-10-04 03:05:00+11:00",
+          "utc_offset_after": "+11:00",
+          "dst_flag_after": 1,
+          "transition_flag_result": true
+        },
+        "end": {
+          "utc_before": "2020-04-04 15:55:00+00:00",
+          "local_before": "2020-04-05 02:55:00+11:00",
+          "utc_offset_before": "+11:00",
+          "dst_flag_before": 1,
+          "utc_after": "2020-04-04 16:05:00+00:00",
+          "local_after": "2020-04-05 02:05:00+10:00",
+          "utc_offset_after": "+10:00",
+          "dst_flag_after": 0,
+          "transition_flag_result": true
+        }
+      },
+      "sa": {
+        "start": {
+          "utc_before": "2020-10-03 16:25:00+00:00",
+          "local_before": "2020-10-04 01:55:00+09:30",
+          "utc_offset_before": "+09:30",
+          "dst_flag_before": 0,
+          "utc_after": "2020-10-03 16:35:00+00:00",
+          "local_after": "2020-10-04 03:05:00+10:30",
+          "utc_offset_after": "+10:30",
+          "dst_flag_after": 1,
+          "transition_flag_result": true
+        },
+        "end": {
+          "utc_before": "2020-04-04 16:25:00+00:00",
+          "local_before": "2020-04-05 02:55:00+10:30",
+          "utc_offset_before": "+10:30",
+          "dst_flag_before": 1,
+          "utc_after": "2020-04-04 16:35:00+00:00",
+          "local_after": "2020-04-05 02:05:00+09:30",
+          "utc_offset_after": "+09:30",
+          "dst_flag_after": 0,
+          "transition_flag_result": true
+        }
+      },
+      "qld": {
+        "start": {
+          "utc_before": "2020-10-03 15:55:00+00:00",
+          "local_before": "2020-10-04 01:55:00+10:00",
+          "utc_offset_before": "+10:00",
+          "dst_flag_before": 0,
+          "utc_after": "2020-10-03 16:05:00+00:00",
+          "local_after": "2020-10-04 02:05:00+10:00",
+          "utc_offset_after": "+10:00",
+          "dst_flag_after": 0,
+          "transition_flag_result": false
+        },
+        "end": {
+          "utc_before": "2020-04-04 15:55:00+00:00",
+          "local_before": "2020-04-05 01:55:00+10:00",
+          "utc_offset_before": "+10:00",
+          "dst_flag_before": 0,
+          "utc_after": "2020-04-04 16:05:00+00:00",
+          "local_after": "2020-04-05 02:05:00+10:00",
+          "utc_offset_after": "+10:00",
+          "dst_flag_after": 0,
+          "transition_flag_result": false
+        }
+      }
+    },
+    "utc_interval_to_local_date_mapping": {
+      "nsw_local_date": "2020-01-02",
+      "qld_local_date": "2020-01-01",
+      "vic_local_date": "2020-01-02",
+      "sa_local_date": "2020-01-01",
+      "tas_local_date": "2020-01-02"
+    },
+    "utc_local_date_boundary_check": {
+      "old_failing_anchor_utc": "2020-01-01 14:00:00+00:00",
+      "old_anchor_local_dates": {
+        "nsw_local_date": "2020-01-02",
+        "qld_local_date": "2020-01-02",
+        "vic_local_date": "2020-01-02",
+        "sa_local_date": "2020-01-02",
+        "tas_local_date": "2020-01-02"
+      },
+      "new_anchor_utc": "2020-01-01 13:15:00+00:00",
+      "new_anchor_local_dates": {
+        "nsw_local_date": "2020-01-02",
+        "qld_local_date": "2020-01-01",
+        "vic_local_date": "2020-01-02",
+        "sa_local_date": "2020-01-01",
+        "tas_local_date": "2020-01-02"
+      },
+      "regions": {
+        "nsw": {
+          "utc_anchor": "2020-01-01 13:15:00+00:00",
+          "local_timestamp": "2020-01-02 00:15:00+11:00",
+          "utc_offset": "+11:00",
+          "local_date": "2020-01-02",
+          "expected_local_date": "2020-01-02",
+          "pass": true
+        },
+        "qld": {
+          "utc_anchor": "2020-01-01 13:15:00+00:00",
+          "local_timestamp": "2020-01-01 23:15:00+10:00",
+          "utc_offset": "+10:00",
+          "local_date": "2020-01-01",
+          "expected_local_date": "2020-01-01",
+          "pass": true
+        },
+        "vic": {
+          "utc_anchor": "2020-01-01 13:15:00+00:00",
+          "local_timestamp": "2020-01-02 00:15:00+11:00",
+          "utc_offset": "+11:00",
+          "local_date": "2020-01-02",
+          "expected_local_date": "2020-01-02",
+          "pass": true
+        },
+        "sa": {
+          "utc_anchor": "2020-01-01 13:15:00+00:00",
+          "local_timestamp": "2020-01-01 23:45:00+10:30",
+          "utc_offset": "+10:30",
+          "local_date": "2020-01-01",
+          "expected_local_date": "2020-01-01",
+          "pass": true
+        },
+        "tas": {
+          "utc_anchor": "2020-01-01 13:15:00+00:00",
+          "local_timestamp": "2020-01-02 00:15:00+11:00",
+          "utc_offset": "+11:00",
+          "local_date": "2020-01-02",
+          "expected_local_date": "2020-01-02",
+          "pass": true
+        }
+      },
+      "distinct_local_dates_count": 2,
+      "mixed_local_dates_pass": true
+    }
+  },
+  "pit_result": {
+    "point_in_time_safe": true,
+    "revision_free": true,
+    "versioned": true,
+    "fully_reproducible": true
+  },
+  "lineage_result": {
+    "version_incremented": true,
+    "lineage_populated": true,
+    "lineage_file": "/Users/haimptasznik/Desktop/haimos-transmission-rights-repo/data/derived/historical_feature_store_calendar_v2_regional/feature_set_lineage.json"
+  }
+}

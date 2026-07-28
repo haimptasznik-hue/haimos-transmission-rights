@@ -1,7 +1,7 @@
 {
-  "name": "haimos-transmission-rights",
+  "name": "haimos",
   "version": "1.0.0",
-  "description": "HaimOS — Transmission Rights Dashboard",
+  "description": "HaimOS — Personal AI Operating System",
   "main": "main.js",
   "author": "Haim",
   "license": "MIT",
@@ -10,8 +10,8 @@
     "build": "electron-builder --mac"
   },
   "build": {
-    "appId": "com.refuel.haimos-transmission-rights",
-    "productName": "HaimOS Transmission Rights",
+    "appId": "com.refuel.haimos",
+    "productName": "HaimOS",
     "asar": false,
     "mac": {
       "category": "public.app-category.productivity",

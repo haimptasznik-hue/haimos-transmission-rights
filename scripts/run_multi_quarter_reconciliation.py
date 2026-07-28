@@ -26,7 +26,6 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from transmission_rights.replication.payout_recon_engine import PayoutReconEngine
 from transmission_rights.replication.aucunits_loader import AucUnitsLoader
-from transmission_rights.replication.quarter_closure import closed_quarters, open_quarters
 
 AUCUNITS_DIR = ROOT / "data/raw/aemo/auction_units"
 IRSR_DERIVED_DIR = ROOT / "data/derived/irsr"
@@ -106,8 +105,6 @@ def parse_args():
     """Parse command-line arguments."""
     quarters = None
     output_file = None
-    include_open = False
-    as_of = None
     i = 1
     while i < len(sys.argv):
         if sys.argv[i] == "--quarters":
@@ -121,29 +118,17 @@ def parse_args():
             if i < len(sys.argv):
                 output_file = sys.argv[i]
             i += 1
-        elif sys.argv[i] == "--include-open":
-            include_open = True
-            i += 1
-        elif sys.argv[i] == "--as-of" and i + 1 < len(sys.argv):
-            as_of = sys.argv[i + 1]
-            i += 2
         else:
             i += 1
-    return quarters, output_file, include_open, as_of
+    return quarters, output_file
 
 def main():
     # Parse arguments
-    quarters, output_file, include_open, as_of = parse_args()
+    quarters, output_file = parse_args()
     
     # Detect quarters if not specified
     if not quarters:
         quarters = detect_available_quarters()
-
-    if not include_open:
-        quarters = closed_quarters(quarters)
-    else:
-        # Keep open quarters available only when explicitly requested.
-        quarters = sorted(set(quarters))
     
     if not quarters:
         print("ERROR: No quarters detected")

@@ -1,3 +1,46 @@
+# Start Here
+
+Anyone contributing to HAIMOS must read these documents in this order before beginning work:
+
+1. `VISION.md` — the long-term purpose and North Star for the platform.
+2. `docs/HAIMOS_MARKET_PHYSICS_ENGINE_V1_ARCHITECTURE.md` — the frozen architectural baseline.
+3. `docs/MARKET_PHYSICS_MANIFESTO.md` — the physics-first research rationale.
+4. `docs/MARKET_PHYSICS_THEORY.md` — the current causal theory of the market.
+5. `docs/MARKET_PHYSICS_KNOWLEDGE_GRAPH.md` — the structured reasoning layer and evidence graph.
+6. `docs/Research Journal.md` — the laboratory notebook and experiment record.
+7. `docs/MARKET_PHYSICS_RESEARCH_LOG.md` — the operational command centre for the research program.
+
+For contribution rules and project governance, also read:
+
+- `CONTRIBUTING.md` — how research and engineering work is performed.
+- `PROJECT_CONSTITUTION.md` — the governing charter for decisions, research, and product scope.
+- `docs/DOCUMENTATION_MAP.md` — the navigation map from vision to implementation.
+
+## Phase 6 Navigation
+
+The following documents define the active Phase 6 program and are reachable from this repository entry point:
+
+- `CHIEF_RESEARCH_ANALYST_ROLE.md` — the operating role definition for research leadership.
+- `PHASE6_INDEX.md` — index of the Phase 6 corpus and reading path.
+- `PHASE6_README.md` — high-level overview of Phase 6 work.
+- `PHASE6_QUICK_START.md` — the shortest path to the current Phase 6 workflow.
+- `PHASE6_LAUNCH_CHECKLIST.md` — the launch checklist for Phase 6 work.
+- `PHASE6_CAUSAL_CONGESTION_RESEARCH.md` — the Phase 6 causal congestion research frame.
+- `docs/PHASE6A_RECOMMENDATIONS.md` — recommendations that followed the Phase 6A research phase.
+- `docs/PHASE_6B_0_RESEARCH_PROGRAM_DESIGN.md` — design for the Phase 6B research program.
+- `docs/LAW_001_EXPERIMENT.md` — first pre-registered market physics experiment.
+- `docs/LAW_002_EXPERIMENT.md` — follow-on experiment focused on residual transmission state.
+- `docs/EXP_001_READINESS_ASSESSMENT.md` — readiness assessment for the first experiment cycle.
+- `reports/EXP_001_DATA_QUALITY.md` — concise quality summary for the first experiment cycle.
+- `reports/EXP_001_RESULTS.md` — results from the first experiment cycle.
+- `reports/EXP_002_METADATA.json` — compact metadata for the second experiment cycle.
+- `reports/EXP_002_RESULTS.md` — results from the second experiment cycle.
+- `docs/MARKET_PHYSICS_MANIFESTO.md` — physics-first research rationale.
+- `docs/MARKET_PHYSICS_THEORY.md` — current theory of the NEM.
+- `docs/MARKET_PHYSICS_KNOWLEDGE_GRAPH.md` — evidence-backed causal structure.
+- `docs/MARKET_PHYSICS_RESEARCH_LOG.md` — operating command centre for the research program.
+- `docs/Research Journal.md` — experiment notebook and falsification record.
+
 # HaimOS Transmission Rights
 
 Independent price discovery engine for Australian NEM transmission rights, focused first on AEMO Settlement Residue Auction (SRA) products.

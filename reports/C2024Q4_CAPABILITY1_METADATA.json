@@ -1,0 +1,64 @@
+{
+  "quarter": "C2024Q4",
+  "inputs": {
+    "source_root": "/Users/haimptasznik/Desktop/haimos-transmission-rights-repo/data/raw/aemo/mmsdm_dispatchinterconnectorres/.cache",
+    "month_paths": [
+      "year=2024/month=10",
+      "year=2024/month=11",
+      "year=2024/month=12"
+    ],
+    "canonical_intervention": 0
+  },
+  "outputs": {
+    "validation_csv": "/Users/haimptasznik/Desktop/haimos-transmission-rights-repo/reports/C2024Q4_CAPABILITY1_VALIDATION.csv",
+    "quality_md": "/Users/haimptasznik/Desktop/haimos-transmission-rights-repo/reports/C2024Q4_CAPABILITY1_QUALITY.md",
+    "intervention_audit_csv": "/Users/haimptasznik/Desktop/haimos-transmission-rights-repo/reports/C2024Q4_CAPABILITY1_INTERVENTION_AUDIT.csv",
+    "metadata_json": "/Users/haimptasznik/Desktop/haimos-transmission-rights-repo/reports/C2024Q4_CAPABILITY1_METADATA.json"
+  },
+  "metrics": {
+    "rows_produced": 158970,
+    "expected_intervals": 26496,
+    "actual_intervals": 26495,
+    "interval_coverage_pct": 99.996226,
+    "duplicate_canonical_keys": 0,
+    "missing_mwflow": 0,
+    "missing_export_limits": 0,
+    "missing_import_limits": 0,
+    "missing_directional_capability": 0,
+    "missing_utilisation": 2118,
+    "zero_limit_intervals": 2103,
+    "null_limit_intervals": 0,
+    "over_limit_intervals": 12124,
+    "maximum_utilisation": 100300020.0,
+    "timestamp_continuity_ok": false,
+    "missing_expected_intervals": 1,
+    "lineage_completeness_pct": 100.0,
+    "excluded_intervention1_rows": 72,
+    "paired_intervention_values_differ_count": 69,
+    "positive_flow_intervals": 78627,
+    "negative_flow_intervals": 73139,
+    "zero_flow_intervals": 7204,
+    "positive_flow_directional_limit_correct": 78627,
+    "negative_flow_directional_limit_correct": 73139,
+    "zero_flow_directional_limit_correct": 7204,
+    "capability_margin_distribution": {
+      "count": 158970.0,
+      "mean": 137.85562880625275,
+      "std": 210.73958173948523,
+      "min": -799.23156,
+      "1%": -0.004849999999976262,
+      "5%": -0.0005800000000135697,
+      "50%": 58.488414999999996,
+      "95%": 614.3425589999999,
+      "99%": 901.0881174999998,
+      "max": 1609.24682
+    },
+    "physically_inconsistent_records": 0,
+    "infinite_utilisation_count": 0,
+    "negative_utilisation_count": 0,
+    "raw_limits_preserved_exactly": true,
+    "over_limit_retained_and_flagged": true,
+    "verdict": "CAPABILITY1_VALIDATED",
+    "blocker": null
+  }
+}

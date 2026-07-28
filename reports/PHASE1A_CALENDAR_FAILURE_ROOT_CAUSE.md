@@ -1,0 +1,8 @@
+# Phase 1A Calendar Failure Root Cause (Post Fix Pass)
+
+| failure_id | gate | classification | fix_applied | current_status | minimum_fix |
+|---|---|---|---|---|---|
+| F1 | Canonical interval keys unchanged | VALIDATOR_DEFECT | Yes | PASS | UTC semantic compare + ISO UTC hash compare |
+| F2 | Base Historical Feature Store v1.0 columns unchanged | VALIDATOR_DEFECT | Yes | PASS | Semantic UTC for datetime columns; strict compare for non-datetime |
+| F3 | Specific holiday test cases | TEST_DATA_DEFECT | Yes | PASS | Asserted-region local-day fixtures + exclusive/shared legal date design |
+| F4 | Cross-state contamination check | TEST_DATA_DEFECT | Yes | PASS | Region-own-local-date legal contamination semantics |

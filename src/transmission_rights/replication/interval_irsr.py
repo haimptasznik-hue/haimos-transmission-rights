@@ -1,1 +1,0 @@
-"""Interval IRSR replication logic."""

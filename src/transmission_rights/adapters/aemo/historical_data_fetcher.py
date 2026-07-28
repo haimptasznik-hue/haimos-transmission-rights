@@ -300,25 +300,16 @@ class HistoricalDataFetcher:
         return cls._quarter_from_datetime(dt)
 
     def reconstruct_irsr_quarterly(self, dispatch_filenames: List[str]) -> pd.DataFrame:
-        rows: List[Dict[str, str | Decimal | datetime]] = []
+        rows: List[Dict[str, str | Decimal]] = []
         for filename in dispatch_filenames:
             content = self.cached_files.get(filename)
             if not content:
                 continue
             for record in self.parse_dispatch_irsr_zip_bytes(content):
-                interval_dt = datetime.strptime(
-                    record.trading_interval.strip('"'),
-                    "%Y/%m/%d %H:%M:%S",
-                )
-                trading_interval_dt = interval_dt.replace(
-                    minute=(interval_dt.minute // 30) * 30,
-                    second=0,
-                )
                 quarter = self._quarter_from_interval_string(record.trading_interval)
                 rows.append(
                     {
                         "quarter": quarter,
-                        "trading_interval": trading_interval_dt,
                         "interconnector_id": record.interconnector_id,
                         "from_region": record.from_region,
                         "residue_aud": record.residue_aud,
@@ -329,22 +320,12 @@ class HistoricalDataFetcher:
             return pd.DataFrame(columns=["quarter", "interconnector_id", "from_region", "residue_aud"])
 
         df = pd.DataFrame(rows)
-        trading_interval_avg = (
-            df.groupby(
-                ["quarter", "interconnector_id", "from_region", "trading_interval"],
-                as_index=False,
-            )["residue_aud"]
-            .mean()
-        )
-        quarterly = (
-            trading_interval_avg.groupby(
-                ["quarter", "interconnector_id", "from_region"],
-                as_index=False,
-            )["residue_aud"]
+        grouped = (
+            df.groupby(["quarter", "interconnector_id", "from_region"], as_index=False)["residue_aud"]
             .sum()
             .sort_values(["quarter", "interconnector_id", "from_region"])
         )
-        return quarterly
+        return grouped
 
     def load_auction_units_from_file(self, filename: str) -> pd.DataFrame:
         content = self.fetch_auction_units_file(filename)

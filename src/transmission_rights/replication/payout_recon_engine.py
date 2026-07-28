@@ -28,10 +28,6 @@ import pandas as pd
 
 from transmission_rights.replication.aucunits_loader import AucUnitsLoader, CategoryQuarterSummary
 
-INTERCONNECTOR_ALIASES = {
-    "V-S-MNSP1": "V-SA",
-}
-
 VARIANCE_THRESHOLD_PCT = Decimal("0.01")   # 1% acceptance target
 
 
@@ -42,14 +38,11 @@ class PayoutReconRow:
     from_region: str
     purchased_units: int
     quarterly_residue_aud: Decimal
-    aemo_total_surplus_aud: Decimal
-    aemo_accumulated_net_payment_aud: Decimal
-    aemo_reference_per_unit: Decimal
-    reconstructed_residue_per_unit: Decimal
+    aemo_accumulated_net_payment: Decimal
+    aemo_net_payment_per_unit: Decimal
+    reconstructed_net_payment_per_unit: Decimal
     absolute_variance_aud: Decimal
     percentage_variance: Decimal
-    net_payment_absolute_variance_aud: Decimal
-    net_payment_percentage_variance: Decimal
     aemo_bill_run_type: str
     aemo_source_file: str
     warnings: List[str] = field(default_factory=list)
@@ -60,11 +53,9 @@ class PayoutReconRow:
 class PayoutReconReport:
     relevant_quarter: str
     rows: List[PayoutReconRow]
-    total_aemo_reference_aud: Decimal
-    total_aemo_accumulated_net_payment_aud: Decimal
+    total_aemo_payment_aud: Decimal
     total_reconstructed_residue_aud: Decimal
     total_absolute_variance_aud: Decimal
-    total_absolute_variance_vs_net_payment_aud: Decimal
     categories_reconciled: int
     categories_with_variance: int
     categories_missing_aucunits: int
@@ -97,13 +88,7 @@ class PayoutReconEngine:
     def load_dispatch_quarterly(self, path: Path) -> None:
         df = pd.read_csv(path, dtype=str)
         df.columns = [c.strip() for c in df.columns]
-        df["interconnector_id"] = df["interconnector_id"].replace(INTERCONNECTOR_ALIASES)
         df["residue_aud"] = pd.to_numeric(df["residue_aud"], errors="coerce").fillna(0.0)
-        df = (
-            df.groupby(["quarter", "interconnector_id", "from_region"], as_index=False)["residue_aud"]
-            .sum()
-            .sort_values(["quarter", "interconnector_id", "from_region"])
-        )
         if self._dispatch_df is None:
             self._dispatch_df = df
         else:
@@ -126,11 +111,9 @@ class PayoutReconEngine:
         return PayoutReconReport(
             relevant_quarter=relevant_quarter,
             rows=rows,
-            total_aemo_reference_aud=sum((r.aemo_total_surplus_aud for r in rows), Decimal("0")),
-            total_aemo_accumulated_net_payment_aud=sum((r.aemo_accumulated_net_payment_aud for r in rows), Decimal("0")),
+            total_aemo_payment_aud=sum((r.aemo_accumulated_net_payment for r in rows), Decimal("0")),
             total_reconstructed_residue_aud=sum((r.quarterly_residue_aud for r in rows), Decimal("0")),
             total_absolute_variance_aud=sum((r.absolute_variance_aud for r in rows), Decimal("0")),
-            total_absolute_variance_vs_net_payment_aud=sum((r.net_payment_absolute_variance_aud for r in rows), Decimal("0")),
             categories_reconciled=sum(1 for r in rows if r.calculation_status == "reconciled"),
             categories_with_variance=sum(1 for r in rows if "variance" in r.calculation_status),
             categories_missing_aucunits=sum(1 for r in rows if "no_aucunits" in r.warnings),
@@ -146,18 +129,11 @@ class PayoutReconEngine:
         if summary is None:
             warnings.append("no_aucunits")
             aemo_acc = aemo_ppu = Decimal("0")
-            aemo_net = Decimal("0")
             purchased_units = 0
             bill_run = source_file = "N/A"
         else:
-            aemo_acc = summary.total_surplus
-            aemo_net = summary.accumulated_net_payment
-            if summary.purchased_units > 0:
-                aemo_ppu = (summary.total_surplus / Decimal(summary.purchased_units)).quantize(
-                    Decimal("0.000001"), rounding=ROUND_HALF_UP
-                )
-            else:
-                aemo_ppu = Decimal("0")
+            aemo_acc = summary.accumulated_net_payment
+            aemo_ppu = summary.accumulated_net_payment_per_unit
             purchased_units = summary.purchased_units
             bill_run = summary.bill_run_type
             source_file = summary.source_file
@@ -194,14 +170,6 @@ class PayoutReconEngine:
             pct_var = Decimal("1")
             warnings.append("zero_aemo_baseline")
 
-        abs_var_net = (quarterly_residue - aemo_net).copy_abs()
-        if aemo_net != Decimal("0"):
-            pct_var_net = abs_var_net / aemo_net.copy_abs()
-        elif quarterly_residue == Decimal("0"):
-            pct_var_net = Decimal("0")
-        else:
-            pct_var_net = Decimal("1")
-
         if "no_aucunits" in warnings or "no_dispatch_irsr" in warnings:
             status = "incomplete_data"
         elif pct_var <= VARIANCE_THRESHOLD_PCT:
@@ -220,14 +188,11 @@ class PayoutReconEngine:
             from_region=from_region,
             purchased_units=purchased_units,
             quarterly_residue_aud=quarterly_residue,
-            aemo_total_surplus_aud=aemo_acc,
-            aemo_accumulated_net_payment_aud=aemo_net,
-            aemo_reference_per_unit=aemo_ppu,
-            reconstructed_residue_per_unit=recon_ppu,
+            aemo_accumulated_net_payment=aemo_acc,
+            aemo_net_payment_per_unit=aemo_ppu,
+            reconstructed_net_payment_per_unit=recon_ppu,
             absolute_variance_aud=abs_var,
             percentage_variance=pct_var,
-            net_payment_absolute_variance_aud=abs_var_net,
-            net_payment_percentage_variance=pct_var_net,
             aemo_bill_run_type=bill_run,
             aemo_source_file=source_file,
             warnings=warnings,
@@ -239,21 +204,19 @@ def print_report(report: PayoutReconReport) -> None:
     print(f"\n{'='*110}")
     print(f"  AEMO REPLICATION — PAYOUT RECONCILIATION   Quarter: {report.relevant_quarter}")
     print(f"{'='*110}")
-    print(f"  {'Interconnector':<18} {'Dir':<8} {'Units':>6}  {'Dispatch IRSR':>18}  {'AEMO TotSplus':>18}  {'Recon PPU':>12}  {'AEMO PPU':>12}  {'Var%':>7}  Status")
+    print(f"  {'Interconnector':<18} {'Dir':<8} {'Units':>6}  {'Dispatch IRSR':>18}  {'AEMO AccPmt':>18}  {'Recon PPU':>12}  {'AEMO PPU':>12}  {'Var%':>7}  Status")
     print(f"  {'-'*105}")
     for r in report.rows:
         warn_str = f"  [{', '.join(r.warnings)}]" if r.warnings else ""
         print(
             f"  {r.interconnector_id:<18} {r.from_region:<8} {r.purchased_units:>6}  "
-            f"{float(r.quarterly_residue_aud):>18,.2f}  {float(r.aemo_total_surplus_aud):>18,.2f}  "
-            f"{float(r.reconstructed_residue_per_unit):>12,.4f}  {float(r.aemo_reference_per_unit):>12,.4f}  "
+            f"{float(r.quarterly_residue_aud):>18,.2f}  {float(r.aemo_accumulated_net_payment):>18,.2f}  "
+            f"{float(r.reconstructed_net_payment_per_unit):>12,.4f}  {float(r.aemo_net_payment_per_unit):>12,.4f}  "
             f"{float(r.percentage_variance):>6.2%}  {r.calculation_status}{warn_str}"
         )
     print(f"  {'-'*105}")
-    print(f"  Total AEMO total surplus:           AUD {float(report.total_aemo_reference_aud):>18,.2f}")
-    print(f"  Total AEMO accumulated net payment: AUD {float(report.total_aemo_accumulated_net_payment_aud):>18,.2f}")
+    print(f"  Total AEMO accumulated payments:     AUD {float(report.total_aemo_payment_aud):>18,.2f}")
     print(f"  Total dispatch IRSR (reconstructed): AUD {float(report.total_reconstructed_residue_aud):>18,.2f}")
     print(f"  Total absolute variance:             AUD {float(report.total_absolute_variance_aud):>18,.2f}")
-    print(f"  Abs variance vs accumulated payment: AUD {float(report.total_absolute_variance_vs_net_payment_aud):>18,.2f}")
     print(f"\n  Reconciled (<1%): {report.categories_reconciled}  |  With variance: {report.categories_with_variance}  |  Missing AUCUNITS: {report.categories_missing_aucunits}  |  Missing IRSR: {report.categories_missing_irsr}")
     print(f"{'='*110}\n")

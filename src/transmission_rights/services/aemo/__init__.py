@@ -22,6 +22,7 @@ from .sra_irssr_calculator import SRAIRSRCalculator
 from .sra_distribution_engine import SRADistributionEngine
 from .sra_auction_parser import SRAAuctionParser
 from .sra_position_ledger import SRAPositionLedger
+from .sra_historical_replay import SRAHistoricalReplay
 from .sra_forecast_engine import SRAForecastEngine
 from .sra_mark_engine import SRAMarkEngine
 from .sra_execution_adapter import SRAExecutionAdapter
@@ -33,6 +34,7 @@ __all__ = [
     'SRADistributionEngine',
     'SRAAuctionParser',
     'SRAPositionLedger',
+    'SRAHistoricalReplay',
     'SRAForecastEngine',
     'SRAMarkEngine',
     'SRAExecutionAdapter',

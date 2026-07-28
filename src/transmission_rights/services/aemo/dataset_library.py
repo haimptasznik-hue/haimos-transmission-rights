@@ -10,6 +10,13 @@ import pandas as pd
 AEMO_MARKET_TZ = ZoneInfo("Australia/Brisbane")
 
 
+def _numeric_series(frame: pd.DataFrame, candidates: tuple[str, ...]) -> pd.Series:
+    for column in candidates:
+        if column in frame.columns:
+            return pd.to_numeric(frame[column], errors="coerce").fillna(0.0)
+    return pd.Series(0.0, index=frame.index, dtype=float)
+
+
 @dataclass(frozen=True)
 class DatasetSpec:
     dataset_id: str
@@ -191,7 +198,7 @@ def build_dataset_catalog(repo_root: Path) -> list[DatasetSpec]:
             refresh_frequency="5-minute historical",
             description="Regional demand, net interchange, and price target aggregates from AEMO dispatch.",
             commercial_applications="Demand forecasting|Interconnector flow prediction|Regional price targeting|SRA valuation",
-            value_columns=("REGIONID", "TOTAL_DEMAND_MW", "NET_INTERCHANGE_MW", "PRICE_TARGET"),
+            value_columns=("REGIONID", "TOTALDEMAND", "NETINTERCHANGE", "PRICE_TARGET"),
             timestamp_aliases=("interval_timestamp", "interval_timestamp_utc", "settlementdate"),
             data_glob="data/raw/aemo/mmsdm_dispatchregionsum/.cache/**/*.dispatchregionsum.csv.gz",
         ),
@@ -207,7 +214,7 @@ def build_dataset_catalog(repo_root: Path) -> list[DatasetSpec]:
             refresh_frequency="5-minute historical",
             description="Interconnector flow results and losses normalized from AEMO dispatch archives.",
             commercial_applications="Flow forecasting|Congestion localization|Transmission routing|SRA valuation",
-            value_columns=("INTERCONNECTORID", "FLOW_MW", "LOSSES_MW"),
+            value_columns=("INTERCONNECTORID", "MWFLOW", "EXPORTLIMIT", "IMPORTLIMIT", "MWLOSSES"),
             timestamp_aliases=("interval_timestamp", "interval_timestamp_utc", "settlementdate"),
             data_glob="data/raw/aemo/mmsdm_dispatchinterconnectorres/.cache/**/*.dispatchinterconnectorres.csv.gz",
         ),
@@ -216,6 +223,55 @@ def build_dataset_catalog(repo_root: Path) -> list[DatasetSpec]:
 
 def dataset_catalog_frame(repo_root: Path) -> pd.DataFrame:
     return pd.DataFrame([asdict(spec) for spec in build_dataset_catalog(repo_root)])
+
+
+def _derive_interconnector_row_fields(working: pd.DataFrame) -> pd.DataFrame:
+    """Add directional capability, utilisation and quality flags at row level (per-interconnector per-interval).
+
+    Rules:
+    - EXPORTLIMIT_MW and IMPORTLIMIT_MW are preserved exactly from source.
+    - Positive MWFLOW (export) → directional_limit_mw = EXPORTLIMIT_MW.
+    - Negative MWFLOW (import) → directional_limit_mw = abs(IMPORTLIMIT_MW).
+    - Zero MWFLOW → directional_limit_mw = max(EXPORTLIMIT_MW, abs(IMPORTLIMIT_MW)).
+    - Null or zero limit → limit_quality_flag = 'INVALID'; utilisation_pct = NaN.
+    - Over-limit: utilisation retained without clipping; over_limit_flag = True.
+    - utilisation_pct = abs(MWFLOW) / directional_limit_mw × 100 (only when limit > 0).
+    """
+    out = working.copy()
+    mwflow = pd.to_numeric(out.get("MWFLOW", pd.Series(dtype=float)), errors="coerce")
+    export_limit = pd.to_numeric(out.get("EXPORTLIMIT", pd.Series(dtype=float)), errors="coerce")
+    import_limit = pd.to_numeric(out.get("IMPORTLIMIT", pd.Series(dtype=float)), errors="coerce")
+
+    # Preserve raw values
+    out["EXPORTLIMIT_MW"] = export_limit
+    out["IMPORTLIMIT_MW"] = import_limit
+
+    # Directional limit selection
+    directional_limit = pd.Series(index=out.index, dtype=float)
+    positive_mask = mwflow > 0
+    negative_mask = mwflow < 0
+    zero_mask = mwflow == 0
+    null_mask = mwflow.isna()
+
+    directional_limit = directional_limit.copy()
+    directional_limit[positive_mask] = export_limit[positive_mask]
+    directional_limit[negative_mask] = import_limit[negative_mask].abs()
+    directional_limit[zero_mask] = pd.concat(
+        [export_limit[zero_mask], import_limit[zero_mask].abs()], axis=1
+    ).max(axis=1)
+    directional_limit[null_mask] = float("nan")
+    out["directional_limit_mw"] = directional_limit
+
+    # Quality flag
+    limit_invalid = directional_limit.isna() | (directional_limit <= 0)
+    out["limit_quality_flag"] = pd.Series("OK", index=out.index).where(~limit_invalid, "INVALID")
+
+    # Utilisation — retain over-100 values; NaN when limit invalid
+    utilisation = (mwflow.abs() / directional_limit * 100.0).where(~limit_invalid, float("nan"))
+    out["utilisation_pct"] = utilisation
+    out["over_limit_flag"] = utilisation > 100.0
+
+    return out
 
 
 def build_correlation_ready_table(
@@ -306,9 +362,9 @@ def build_correlation_ready_table(
 
         if dataset_id == "dispatchregionsum":
             working = frame.copy()
-            working["TOTAL_DEMAND_MW"] = pd.to_numeric(working.get("TOTAL_DEMAND_MW"), errors="coerce").fillna(0.0)
-            working["NET_INTERCHANGE_MW"] = pd.to_numeric(working.get("NET_INTERCHANGE_MW"), errors="coerce").fillna(0.0)
-            working["PRICE_TARGET"] = pd.to_numeric(working.get("PRICE_TARGET"), errors="coerce").fillna(0.0)
+            working["TOTAL_DEMAND_MW"] = _numeric_series(working, ("TOTALDEMAND", "TOTAL_DEMAND_MW"))
+            working["NET_INTERCHANGE_MW"] = _numeric_series(working, ("NETINTERCHANGE", "NET_INTERCHANGE_MW", "NETINTERCHANGE_MW"))
+            working["PRICE_TARGET"] = _numeric_series(working, ("PRICE_TARGET", "PRICE"))
             grouped = (
                 working.groupby("interval_timestamp_utc", as_index=False)
                 .agg(
@@ -324,16 +380,28 @@ def build_correlation_ready_table(
 
         if dataset_id == "dispatchinterconnectorres":
             working = frame.copy()
-            working["FLOW_MW"] = pd.to_numeric(working.get("FLOW_MW"), errors="coerce").fillna(0.0)
-            working["LOSSES_MW"] = pd.to_numeric(working.get("LOSSES_MW"), errors="coerce").fillna(0.0)
+            # Derive row-level directional fields before aggregation
+            working = _derive_interconnector_row_fields(working)
+            working["LOSSES_MW"] = _numeric_series(working, ("MWLOSSES", "LOSSES_MW"))
             grouped = (
                 working.groupby("interval_timestamp_utc", as_index=False)
                 .agg(
                     dispatchinterconnectorres_interconnector_count=("INTERCONNECTORID", "nunique"),
-                    dispatchinterconnectorres_net_flow_mw=("FLOW_MW", "sum"),
-                    dispatchinterconnectorres_total_abs_flow_mw=("FLOW_MW", lambda s: float(s.abs().sum())),
-                    dispatchinterconnectorres_mean_flow_mw=("FLOW_MW", "mean"),
+                    # Raw flow
+                    dispatchinterconnectorres_net_flow_mw=("MWFLOW", "sum"),
+                    dispatchinterconnectorres_total_abs_flow_mw=("MWFLOW", lambda s: float(s.abs().sum())),
+                    dispatchinterconnectorres_mean_flow_mw=("MWFLOW", "mean"),
                     dispatchinterconnectorres_total_losses_mw=("LOSSES_MW", "sum"),
+                    # Preserved raw limits (mean across interconnectors in interval)
+                    dispatchinterconnectorres_export_limit_mw=("EXPORTLIMIT_MW", "mean"),
+                    dispatchinterconnectorres_import_limit_mw=("IMPORTLIMIT_MW", "mean"),
+                    # Directional capability
+                    dispatchinterconnectorres_directional_limit_mw=("directional_limit_mw", "mean"),
+                    # Utilisation (mean across interconnectors)
+                    dispatchinterconnectorres_utilisation_pct=("utilisation_pct", "mean"),
+                    # Quality flags
+                    dispatchinterconnectorres_limit_invalid_count=("limit_quality_flag", lambda s: int((s == "INVALID").sum())),
+                    dispatchinterconnectorres_over_limit_count=("over_limit_flag", lambda s: int(s.fillna(False).sum())),
                 )
             )
             frame = grouped
