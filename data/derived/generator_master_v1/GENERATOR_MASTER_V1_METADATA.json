@@ -1,0 +1,221 @@
+{
+  "generator_master": {
+    "generator_master_version": "1.0",
+    "schema_version": "1.0",
+    "pit_scope": "CURRENT_STATE_ONLY",
+    "pit_explanation": "Single current-state registration snapshot (2026-07-29). No effective_from/effective_to history in registration source. Classifications are valid only for the snapshot date.",
+    "snapshot_date": "2026-07-29",
+    "rows": 384,
+    "total_registered_capacity_mw": 64336.393,
+    "renewable_unit_count": 239,
+    "renewable_unit_share_pct": 62.2395833333,
+    "renewable_registered_capacity_mw": 30405.797,
+    "renewable_registered_capacity_share_pct": 47.2606491943,
+    "renewable_penetration_pct_status": "NOT_YET_CALCULATED",
+    "quality_status_distribution": {
+      "AUTHORITATIVE": 384
+    },
+    "generation_weighted_scada_coverage_pct": 99.1169829536,
+    "unmatched_historical_scada_duids": 101,
+    "registration_only_inactive_duids": 185,
+    "canonical_parquet_sha256": "2c1122fcf90e3ccdf1c15efa330f1ad3ae73c05e3af46baa5f9f8fbaa6a61bad"
+  },
+  "metric_definitions": {
+    "renewable_unit_share_pct": {
+      "formula": "renewable_duid_count / total_duid_count * 100",
+      "numerator_units": "DUID count",
+      "denominator_units": "DUID count"
+    },
+    "renewable_registered_capacity_share_pct": {
+      "formula": "renewable_registered_mw / total_registered_mw * 100",
+      "numerator_units": "MW",
+      "denominator_units": "MW"
+    },
+    "renewable_penetration_pct": {
+      "formula": "renewable_generation_mw / total_generation_mw * 100",
+      "status": "NOT_YET_CALCULATED \u2014 requires five-minute SCADA generation aggregation"
+    }
+  },
+  "fuel_shares": {
+    "unit_count_share_pct": {
+      "BATTERY": 2.34375,
+      "BIOMASS": 0.78125,
+      "FOSSIL": 34.6354166667,
+      "HYDRO": 12.7604166667,
+      "SOLAR": 26.3020833333,
+      "UNKNOWN": 0.78125,
+      "WIND": 22.3958333333
+    },
+    "registered_capacity_share_pct": {
+      "BATTERY": 0.9652390677,
+      "BIOMASS": 0.1523243617,
+      "FOSSIL": 50.6549939783,
+      "HYDRO": 13.0689639377,
+      "SOLAR": 15.9533454106,
+      "UNKNOWN": 1.1191177597,
+      "WIND": 18.0860154843
+    }
+  },
+  "taxonomy": {
+    "taxonomy_version": "gm_v1_taxonomy_audit_2026-07-29",
+    "fuel_categories": [
+      "BLACK_COAL",
+      "BROWN_COAL",
+      "NATURAL_GAS",
+      "DIESEL",
+      "DISTILLATE",
+      "WIND",
+      "SOLAR",
+      "HYDRO",
+      "BIOENERGY",
+      "BATTERY",
+      "LOAD",
+      "OTHER",
+      "UNKNOWN"
+    ],
+    "technology_categories": [
+      "STEAM_TURBINE",
+      "GAS_TURBINE",
+      "COMBINED_CYCLE",
+      "RECIPROCATING_ENGINE",
+      "WIND_TURBINE",
+      "SOLAR_PV",
+      "HYDRO_TURBINE",
+      "PUMPED_HYDRO",
+      "BATTERY_STORAGE",
+      "SCHEDULED_LOAD",
+      "OTHER",
+      "UNKNOWN"
+    ],
+    "ambiguous_mappings": [
+      {
+        "duid": "AGLHAL",
+        "field": "Fuel Source - Descriptor",
+        "raw_descriptor": "NATURAL GAS / DIESEL",
+        "treatment": "OTHER"
+      },
+      {
+        "duid": "TORRB2",
+        "field": "Fuel Source - Descriptor",
+        "raw_descriptor": "NATURAL GAS / FUEL OIL",
+        "treatment": "OTHER"
+      },
+      {
+        "duid": "TORRB3",
+        "field": "Fuel Source - Descriptor",
+        "raw_descriptor": "NATURAL GAS / FUEL OIL",
+        "treatment": "OTHER"
+      },
+      {
+        "duid": "TORRB4",
+        "field": "Fuel Source - Descriptor",
+        "raw_descriptor": "NATURAL GAS / FUEL OIL",
+        "treatment": "OTHER"
+      },
+      {
+        "duid": "W/HOE#1",
+        "field": "Technology Type - Descriptor",
+        "raw_descriptor": "PUMP STORAGE",
+        "treatment": "PUMPED_HYDRO \u2014 storage conversion, excluded from primary renewable generation"
+      },
+      {
+        "duid": "W/HOE#2",
+        "field": "Technology Type - Descriptor",
+        "raw_descriptor": "PUMP STORAGE",
+        "treatment": "PUMPED_HYDRO \u2014 storage conversion, excluded from primary renewable generation"
+      }
+    ],
+    "unknown_unmapped_count": 3,
+    "storage_classification": {
+      "battery_is_storage_not_primary_renewable_generation": true,
+      "pumped_hydro_is_storage_conversion_not_primary_renewable_generation": true,
+      "storage_units": 11,
+      "storage_capacity_mw": 1191.0
+    },
+    "pumped_hydro_treatment": {
+      "classified_separately_from_primary_renewable_generation": true,
+      "units": 2,
+      "capacity_mw": 570.0
+    },
+    "hydro_treatment": "HYDRO category represents conventional (run-of-river / gravity) hydro generation. Pumped-storage hydro is classified as PUMPED_HYDRO (storage conversion class) and is not counted as primary renewable generation by default.",
+    "battery_treatment": "BATTERY is classified as storage and is not counted as primary renewable generation by default. Battery charging loads are not generation.",
+    "renewable_flag_rule": "renewable_flag = True when fuel_type in {WIND, SOLAR, HYDRO, BIOENERGY}. BATTERY and PUMPED_HYDRO are excluded. Rule is applied to normalized fuel_type field only; no DUID-name inference is used.",
+    "no_duid_name_inference_used": true
+  },
+  "provenance": {
+    "authoritative_registration_fields": [
+      "DUID",
+      "station_name",
+      "participant",
+      "region",
+      "registered_capacity_mw",
+      "snapshot_date",
+      "snapshot_version"
+    ],
+    "authoritative_scada_observation_fields": [
+      "first_seen_utc",
+      "last_seen_utc",
+      "observed_max_mw",
+      "observed_min_mw",
+      "observed_mean_mw",
+      "interval_count",
+      "positive_interval_count",
+      "zero_interval_count",
+      "negative_interval_count",
+      "positive_energy_mwh_proxy",
+      "negative_energy_mwh_proxy"
+    ],
+    "derived_normalized_classification_fields": [
+      "fuel_type",
+      "technology_type",
+      "dispatch_classification",
+      "renewable_flag"
+    ],
+    "derived_metadata_fields": [
+      "authoritative_source",
+      "classification_confidence",
+      "quality_status",
+      "schema_version",
+      "generator_master_version",
+      "pit_scope",
+      "effective_from",
+      "effective_to"
+    ],
+    "csv_interchange_note": "CSV readers must enforce string dtype for version identifier fields (schema_version, generator_master_version, snapshot_version, DUID). Generic CSV type-inference may interpret values such as \"1.0\" as float64. This is an interchange-format limitation, not a data-quality defect. The canonical Parquet file is authoritative."
+  },
+  "regional_summary": [
+    {
+      "region": "NSW1",
+      "count": 97,
+      "capacity_mw": 21584.875
+    },
+    {
+      "region": "QLD1",
+      "count": 98,
+      "capacity_mw": 17794.018
+    },
+    {
+      "region": "SA1",
+      "count": 70,
+      "capacity_mw": 6566.9
+    },
+    {
+      "region": "TAS1",
+      "count": 33,
+      "capacity_mw": 3211.2
+    },
+    {
+      "region": "VIC1",
+      "count": 86,
+      "capacity_mw": 15179.4
+    }
+  ],
+  "constraints_and_limitations": [
+    "PIT scope remains CURRENT_STATE_ONLY.",
+    "No historical effective-date history in registration source.",
+    "101 unmatched historical SCADA DUIDs retained as explicit limitation.",
+    "185 registration-only inactive DUIDs retained as explicit limitation.",
+    "Normalized classifications are derived transformations, not direct AEMO categorical outputs.",
+    "Five-minute renewable_penetration_pct has not been calculated in this dataset."
+  ]
+}
