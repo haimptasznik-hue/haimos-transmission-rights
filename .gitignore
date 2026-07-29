@@ -24,6 +24,8 @@ data/raw/aemo/
 # Derived cache datasets (reproducible from pipeline)
 # ---------------------------------------------------------------------------
 data/derived/
+!data/derived/renewable_penetration_v1/
+!data/derived/renewable_penetration_v1/**
 
 # ---------------------------------------------------------------------------
 # Temporary, profiling and debug artifacts
